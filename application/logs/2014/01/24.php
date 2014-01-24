@@ -69,3 +69,27 @@
 #8 /var/www/realstate/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #9 /var/www/realstate/index.php(108): Kohana_Request->execute()
 #10 {main}
+2014-01-24 11:20:27 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI:  ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-01-24 11:20:27 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI:  ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-01-24 11:44:05 --- ERROR: ErrorException [ 8 ]: Undefined index: controller ~ SYSPATH/classes/kohana/request.php [ 812 ]
+2014-01-24 11:44:05 --- STRACE: ErrorException [ 8 ]: Undefined index: controller ~ SYSPATH/classes/kohana/request.php [ 812 ]
+--
+#0 /var/www/realstate/system/classes/kohana/request.php(812): Kohana_Core::error_handler(8, 'Undefined index...', '/var/www/realst...', 812, Array)
+#1 /var/www/realstate/system/classes/kohana/request.php(198): Kohana_Request->__construct('', NULL)
+#2 /var/www/realstate/index.php(107): Kohana_Request::factory()
+#3 {main}
+2014-01-24 11:49:14 --- ERROR: View_Exception [ 0 ]: The requested view template could not be found ~ SYSPATH/classes/kohana/view.php [ 252 ]
+2014-01-24 11:49:14 --- STRACE: View_Exception [ 0 ]: The requested view template could not be found ~ SYSPATH/classes/kohana/view.php [ 252 ]
+--
+#0 /var/www/realstate/system/classes/kohana/view.php(137): Kohana_View->set_filename('template')
+#1 /var/www/realstate/system/classes/kohana/view.php(30): Kohana_View->__construct('template', NULL)
+#2 /var/www/realstate/system/classes/kohana/controller/template.php(33): Kohana_View::factory('template')
+#3 [internal function]: Kohana_Controller_Template->before()
+#4 /var/www/realstate/system/classes/kohana/request/client/internal.php(103): ReflectionMethod->invoke(Object(Controller_Contact))
+#5 /var/www/realstate/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 /var/www/realstate/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#8 {main}

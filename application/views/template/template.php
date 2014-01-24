@@ -32,9 +32,9 @@
     </head>
     <body>
         <div class="container-full">
-            <?php echo $header; ?>
-            <div id="global_body"><?php echo $body; ?></div>
-            <?php echo $footer; ?>
+            <?php echo $header;?>
+            <?php echo $body; ?>
+            <?php echo $footer;?>
         </div>
     </body>
 </html>

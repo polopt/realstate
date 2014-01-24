@@ -69,7 +69,7 @@
                                             <li id="menu-item-1729" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1729"><a href="#">Garden</a></li>
                                         </ul>
                                     </li>
-                                    <li id="menu-item-1592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1592"><a href="contact-us.html">Contact</a></li>
+                                    <li id="menu-item-1592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1592"><a href="contact">Contact</a></li>
                                 </ul>
                                 <div id="social-network">
                                     <!-----------------------------------------#Social Icon URL#------------------------------>
@@ -83,7 +83,6 @@
                         </div>
 
                     </div>
-
                 </div>
             </div><!-- /.navbar -->
         </div>
