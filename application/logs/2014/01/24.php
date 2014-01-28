@@ -93,3 +93,13 @@
 #6 /var/www/realstate/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #7 /var/www/realstate/index.php(108): Kohana_Request->execute()
 #8 {main}
+2014-01-24 15:05:01 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: index.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-01-24 15:05:01 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: index.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-01-24 15:10:51 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: index.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-01-24 15:10:51 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: index.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
