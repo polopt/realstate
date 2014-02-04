@@ -872,6 +872,9 @@ area[title]{
 }
 
 .property-row {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 	margin-bottom: 0px;
 }
 	.property-status {
@@ -3098,7 +3101,12 @@ a img.aligncenter {
 		margin:20px 0;
 	}
 
-	#property_list img, .property-item img{
+    .container {
+        width: 100% !important;
+    }
+
+
+    #property_list img, .property-item img{
 		width:100%;
 	}
 	
