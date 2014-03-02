@@ -3106,9 +3106,14 @@ a img.aligncenter {
     }
 
 
-    #property_list img, .property-item img{
-		width:100%;
-	}
+    #property_list {
+            width: 100%;
+    }
+
+
+    .row-fluid {
+        width: 90%;
+    }
 	
 	.flexslider .slides img {
 		max-width: 800px;
