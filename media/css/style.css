@@ -278,14 +278,14 @@ code {
 /*	Header	*/
 /*------------------------------------------------------*/
 .header-background {
-	background-color: #363d41;
+	background-color: #fff;
 	width: 100%;
 	min-height: 65px;
 	overflow: hidden;
 }
 
 .site-logo{
-	padding:10px 0;
+	padding:10px 10px;
 }
 .site-title a{
 	color:#FFF;
@@ -319,7 +319,7 @@ code {
 
 .contact-info:last-child{
 	border:none;
-	padding-right:0;
+	padding-right:10px;
 	margin-right:0;
 }
 
@@ -514,6 +514,8 @@ code {
 }
 
 .flex-caption{
+    margin-left:auto;
+    margin-right:auto;
 	position:absolute;
 	bottom:100px;
 	width:auto;

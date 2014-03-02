@@ -4,7 +4,7 @@
             <div class="row-fluid">
                 <div class="pull-left">
                     <!---------------------------- #Site Logo# ------------------------->
-                    <a href="index.html" title="Imobiliaria" rel="home"><img class="site-logo" src="/media/images/logo.jpg" alt="And You" /></a><!-- TODO: Logo -->
+                    <a href="index.html" title="Imobiliaria" rel="home"><img class="site-logo" src="" alt="And You" /></a><!-- TODO: Logo -->
                     <!------------------------------------------------------------------>
                 </div>
                 <div class="pull-right">
