@@ -477,6 +477,19 @@ code {
 #social-network a.gp:hover{ background:#d14232; text-decoration:none; color:#FFFFFF; }
 
 
+#menu {
+    color: #9BACB6;
+    position: absolute;
+    top: 13px;
+    font-size: 15px;
+    /*font-weight: 400;*/
+    /*padding-top: 20px;*/
+    text-align: right;
+    width: 100%;
+
+}
+
+
 #nav-main .list-property{
 	font-weight:700;
 	font-size:16px;
@@ -566,18 +579,64 @@ code {
 	
 /* Search Form Style */
 #search_form{
-	position:relative;
-	bottom:100px;
-	margin-bottom:-100px;
+	/*position:relative;*/
+	/*bottom:100px;*/
+	/*margin-bottom:-100px;*/
 	
 }
 
+
+#search {
+    background-color: #808080;
+    /*bottom: 100px;*/
+    color: #FF0000;
+    bottom: 47%;
+    opacity: 0.90;
+    position: absolute;
+    width: 90%;
+    margin: 0 auto;
+    height: 100px;
+    left: 5%;
+}
+
+#search div.form_search {
+    float: left;
+    margin-left: 270px;
+    padding-top: 35px;
+}
+
+div#search div.logo_slider{
+    float: left;
+    width: 35%;
+}
+
+#search .logo_slider img {
+    height: 100px;
+}
+
 .as-form-wrapper{
+    opacity: 0.9;
 	background-color:#d4d8db;
 	padding:25px 30px;
 	padding-bottom:0px;
 	min-height:75px; /* tmp */
 }
+
+#submit_search {
+    background: url("/media/images/search-icon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    cursor: pointer;
+    height: 39px;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    position: absolute;
+    /*right: -2px;*/
+    /*top: 0;*/
+    width: 49px;
+    margin: -4px 0 0 5px;
+}
+
 
 /*------------------------------------------------------*/
 /*	Headline ( Homepage v1 )	*/
@@ -2955,6 +3014,7 @@ a img.aligncenter {
 	}
 	
 	.as-form-wrapper {
+        opacity: 0.9;
 		padding-bottom: 10px;
 	}
 }

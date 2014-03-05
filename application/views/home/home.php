@@ -14,59 +14,58 @@
 
 <div class="content-wrapper clearfix">
 <?=$slider?>
-<div id="search_form" class="container">
-    <section class="advance-search">
-        <div class="as-form-wrapper">
-
-        </div>
-        <!-- /.as-form-wrapper -->
-    </section>
+<!--<div id="search_form" class="container">-->
+<!--    <section class="advance-search">-->
+<!--        <div class="as-form-wrapper">-->
+<!---->
+<!--        </div>-->
+<!--        <!-- /.as-form-wrapper -->
+<!--    </section>-->
     <!-- /.advance-search -->
-</div>
+<!--</div>-->
 <!-- /#search_form -->
 <div id="property_list" class="container">
     <div id="title-listing" class="container">
-        <div class="property-list-title">Featured Properties</div>
-        <div class="property-list-by">
-            <a class="current" href="#">All</a>
-            <a class="" href="#">Apartments</a>
-            <a class="" href="#">Bungalows</a>
-            <a class="" href="#">Condominium</a>
-            <a class="" href="#">Villas</a>
-        </div>
+<!--        <div class="property-list-title">Featured Properties</div>-->
+<!--        <div class="property-list-by">-->
+<!--            <a class="current" href="#">All</a>-->
+<!--            <a class="" href="#">Apartments</a>-->
+<!--            <a class="" href="#">Bungalows</a>-->
+<!--            <a class="" href="#">Condominium</a>-->
+<!--            <a class="" href="#">Villas</a>-->
+<!--        </div>-->
     </div>
     <!-- /#title-listing -->
     <div class="row-fluid property-row">
 
         <?php for($i=0; $i<4; $i++): ?>
-        <div class="span3">
-            <article class="property-item">
-                <div class="property-images">
-                    <a href="property-single.html" title="Florida 5, Pinecrest, FL">
-                        <img width="540" height="360" src="uploads/dummy-540x360.png" class="status-35 wp-post-image"
-                             alt="Florida 5, Pinecrest, FL" title="Florida 5, Pinecrest, FL"/></a>
+            <div class="span3">
+                <article class="property-item">
+                    <div class="property-images">
+                        <a href="property-single.html" title="Florida 5, Pinecrest, FL">
+                            <img width="540" height="360" src="uploads/dummy-540x360.png" class="status-35 wp-post-image"
+                                 alt="Florida 5, Pinecrest, FL" title="Florida 5, Pinecrest, FL"/></a>
 
-                    <div class="property-status status-35-text">On Sale</div>
-                </div>
-                <!-- /.property-images -->
-                <div class="property-attribute">
-                    <h3 class="attribute-title"><a href="property-single.html" title="Florida 5, Pinecrest, FL">Florida
-                            5, Pinecrest, FL</a><i class="icon-heart"></i></h3>
-                    <span class="attribute-city">Miami</span>
+                        <div class="property-status status-35-text">On Sale</div>
+                    </div>
+                    <!-- /.property-images -->
+                    <div class="property-attribute">
+                        <h3 class="attribute-title"><a href="property-single.html" title="Florida 5, Pinecrest, FL">Florida 5, Pinecrest, FL</a><i class="icon-heart"></i></h3>
+                        <span class="attribute-city">Miami</span>
 
-                    <div class="attribute-price">
-                        <span class="attr-pricing"><sup class="price-curr">$</sup>16,000</span>
+                        <div class="attribute-price">
+                            <span class="attr-pricing"><sup class="price-curr">$</sup>16,000</span>
+                        </div>
                     </div>
-                </div>
-                <div class="property-meta clearfix">
-                    <div class="meta-size meta-block"><i class="ico-size"></i><span class="meta-text">240M</span></div>
-                    <div class="meta-bedroom meta-block"><i class="ico-bedroom"></i><span class="meta-text">3</span>
+                    <div class="property-meta clearfix">
+                        <div class="meta-size meta-block"><i class="ico-size"></i><span class="meta-text">240M</span></div>
+                        <div class="meta-bedroom meta-block"><i class="ico-bedroom"></i><span class="meta-text">3</span>
+                        </div>
+                        <div class="meta-bathroom meta-block"><i class="ico-bathroom"></i><span class="meta-text">5</span>
+                        </div>
                     </div>
-                    <div class="meta-bathroom meta-block"><i class="ico-bathroom"></i><span class="meta-text">5</span>
-                    </div>
-                </div>
-            </article>
-        </div>
+                </article>
+            </div>
         <?php endfor; ?>
     </div>
 <!--    <div class="row-fluid property-row">-->

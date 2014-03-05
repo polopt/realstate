@@ -203,3 +203,65 @@
 --
 #0 /var/www/realstate/index.php(108): Kohana_Request->execute()
 #1 {main}
+2014-03-02 12:22:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: images/view-list.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:22:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: images/view-list.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:22:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: images/view-grid.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:22:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: images/view-grid.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:22:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: uploads/dummy-540x360.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:22:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: uploads/dummy-540x360.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:22:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: uploads/dummy-70x60.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:22:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: uploads/dummy-70x60.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:22:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: images/view-list.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:22:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: images/view-list.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:22:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: uploads/dummy-540x360.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:22:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: images/view-grid.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:22:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: uploads/dummy-540x360.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:22:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: images/view-grid.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:22:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: uploads/dummy-70x60.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:22:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: uploads/dummy-70x60.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:23:38 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: property-single.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:23:38 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: property-single.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:23:47 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL property was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 113 ]
+2014-03-02 12:23:47 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL property was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 113 ]
+--
+#0 /var/www/realstate/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 /var/www/realstate/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#3 {main}
+2014-03-02 12:32:36 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: property-listings-list.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:32:36 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: property-listings-list.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
+2014-03-02 12:33:22 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: property-listings-grid.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2014-03-02 12:33:22 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: property-listings-grid.html ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /var/www/realstate/index.php(108): Kohana_Request->execute()
+#1 {main}
