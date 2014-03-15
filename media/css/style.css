@@ -14,7 +14,7 @@ Tags:white,two-columns,flexible-width,custom-background,threaded-comments
 /*--------------------------------------------------------------------------------*/
 /*-- Default font family goes here --*/
 body{
-	font-family:ProximaNova, Arial, sans-serif;
+	font-family:Arial, sans-serif;
 	color:#757c80;
 }
 input, button, select, textarea{
