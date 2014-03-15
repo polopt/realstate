@@ -377,14 +377,14 @@ class Kohana_RouteTest extends Unittest_TestCase
 	{
 		return array(
 			array(
-				'admin(/<controller>(/<action>(/<id>)))',
-				'admin',
-				'admin/users/add',
+				'admin.old(/<controller>(/<action>(/<id>)))',
+				'admin.old',
+				'admin.old/users/add',
 			),
 			array(
 				array('Route_Holder', 'required_parameters_are_needed'),
-				'admin',
-				'admin/users/add',
+				'admin.old',
+				'admin.old/users/add',
 			),
 		);
 	}

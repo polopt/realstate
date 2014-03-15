@@ -97,15 +97,22 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	 'auth'       => MODPATH.'auth',       // Basic authentication
-	 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-//	 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-//        'admin'       => MODPATH.'admin',  
+    'auth' => MODPATH.'auth', // Basic authentication
+    'cache' => MODPATH.'cache', // Caching with multiple backends
+    'database' => MODPATH.'database', // Database access
+    'image' => MODPATH.'image', // Image manipulation
+    'orm' => MODPATH.'orm', // Object Relationship Mapping
+    'pagination' => MODPATH.'pagination', // Paging of results
+    'email' => MODPATH.'email', // kohana 2.3.3 email module
+//	    'userguide' => MODPATH.'userguide', // User guide and API documentation
+    'paypal' => MODPATH.'paypal',
+    'sitemap' => MODPATH.'sitemap',
+    'facebook' => MODPATH.'facebook',
+    'editor' => MODPATH.'editor',
+    'sprig' => MODPATH.'sprig',
+    // 'unittest'   => MODPATH.'unittest',   // Unit testing
+    //'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+    'shindig' => MODPATH.'shindig',
 	));
 
 /**

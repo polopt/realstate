@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : newXMLDocument.xml
+    Created on : March 9, 2011, 11:23 PM
+    Author     : rui
+    Description:
+        Purpose of the document follows.
+-->
+
+<root>
+	<xs:complexType name="PayRequest">
+−
+		<xs:annotation>
+−
+			<xs:documentation>
+
+						The PayRequest contains the payment instructions
+						to make from sender to receivers.
+
+			</xs:documentation>
+		</xs:annotation>
+−
+		<xs:sequence>
+			<xs:element minOccurs="1" name="requestEnvelope" type="common:RequestEnvelope">
+
+			</xs:element>
+			<xs:element minOccurs="0" name="clientDetails" type="common:ClientDetailsType">
+
+			</xs:element>
+			<xs:element minOccurs="1" maxOccurs="1" name="actionType" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="1" maxOccurs="1" name="cancelUrl" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="1" maxOccurs="1" name="currencyCode" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" name="feesPayer" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" name="ipnNotificationUrl" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" name="memo" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" name="pin" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" name="preapprovalKey" type="xs:string">
+
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="1" name="receiverList" type="ap:ReceiverList">
+
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" name="reverseAllParallelPaymentsOnError" type="xs:boolean"/>
+			<xs:element minOccurs="0" maxOccurs="1" name="senderEmail" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="1" maxOccurs="1" name="returnUrl" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" name="trackingId" type="xs:string">
+
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" name="fundingConstraint" type="ap:FundingConstraint"/>
+			<xs:element name="sender" type="ap:SenderIdentifier" minOccurs="0" maxOccurs="1">
+
+			</xs:element>
+			<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+
+	<xs:complexType name="RequestEnvelope">
+−
+		<xs:annotation>
+−
+			<xs:documentation>
+
+						This specifies the list of parameters with every
+						request to the service.
+
+			</xs:documentation>
+		</xs:annotation>
+−
+		<xs:sequence>
+−
+			<xs:element name="detailLevel" type="common:DetailLevelCode" minOccurs="0">
+−
+				<xs:annotation>
+−
+					<xs:documentation>
+
+								This specifies the required detail level
+								that is needed by a client application
+								pertaining to a particular data
+								component (e.g., Item, Transaction,
+								etc.). The detail level is specified in
+								the DetailLevelCodeType which has all
+								the enumerated values of the detail
+								level for each component.
+
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+−
+			<xs:element name="errorLanguage" type="xs:string" minOccurs="1" default="en_US">
+−
+				<xs:annotation>
+−
+					<xs:documentation>
+
+								This should be the standard RFC 3066
+								language identification tag, e.g.,
+								en_US.
+
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+</root>

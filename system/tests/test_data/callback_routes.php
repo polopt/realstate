@@ -51,7 +51,7 @@ class Route_Holder
 	 */
 	public static function required_parameters_are_needed($uri)
 	{
-		if (substr($uri, 0, 5) == 'admin')
+		if (substr($uri, 0, 5) == 'admin.old')
 		{
 			return array(
 				'controller' => 'foo',

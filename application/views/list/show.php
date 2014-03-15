@@ -21,10 +21,10 @@
 <div id="archive-wrapper">
 <div class="property-sort">
     <div class="sort-title">
-        <span class="sort-by">Sort By: </span>
-        <a href="#" class="current">All</a>
-        <a class="" href="#">For Rent</a>
-        <a class="" href="#">For Sale</a>
+<!--        <span class="sort-by">Sort By: </span>-->
+<!--        <a href="#" class="current">All</a>-->
+<!--        <a class="" href="#">For Rent</a>-->
+<!--        <a class="" href="#">For Sale</a>-->
     </div>
     <div class="grid-view hidden-phone">
         <a href="property-listings-list.html"><img src="/media/images/view-list.png" /></a>
@@ -50,7 +50,7 @@
     </div>
     <div class="listing-info span7">
         <div class="listing-title">
-            <a href="property-single.html" title="Florida 5, Pinecrest, FL">Florida 5, Pinecrest, FL</a>
+            <a href="/property/detail" title="Florida 5, Pinecrest, FL">Florida 5, Pinecrest, FL</a>
             <i class="icon-heart"></i>
         </div>
         <div class="listing-content">
