@@ -26,14 +26,14 @@
 
 
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-         <link rel="stylesheet" href="/media/css/style.css" type="text/css" media="all" />
-        
+        <link rel="stylesheet" href="/media/css/style.css" type="text/css" media="all" />
+        <link rel='stylesheet' id=''  href='/media/css/main.css' type='text/css' media='all' />
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
           {lang: 'pt-PT'}
         </script>
     </head>
-    <body>
-        <div class="container-full">
+    <body class="body_class-homepage html front not-logged-in no-sidebars page-homepage i18n-pt-pt">
+        <div id="center_page" class="container-full">
             <?php echo $header;?>
             <?php echo $body; ?>
             <?php echo $footer;?>

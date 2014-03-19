@@ -49,13 +49,16 @@ h4{font-size:22px}
 h5{font-size:18px}
 h6{font-size:14px}
 
+/************************** end ***********************************/
+
 /*	Form	*/
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	border-radius:0 !important;
 	-webkit-border-radius:0 !important;
 	-moz-border-radius:0 !important;
-    width: 40%;
+    /*width: 40%;*/
     height: 30px;
+    text-align: center;
 }
 
 /*	Title	*/
@@ -271,9 +274,12 @@ code {
 /* Container Wrapper
 /*------------------------------------------------------*/
 .container-full{
-	width:100%;
-	margin:0;
-	padding:0;
+	/*width:100%;*/
+	/*margin:0;*/
+	/*padding:0;*/
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
 }
 
 /*------------------------------------------------------*/
@@ -525,7 +531,8 @@ code {
 	width:100%;
 	overflow:hidden;
 	margin:0 auto;
-	background:#CCC;
+    background-size: cover;
+    background: #CCC url('/media/images/background.jpg');
 }
 
 .flex-caption{
@@ -595,31 +602,41 @@ code {
     /*opacity: 0.90;*/
     position: absolute;
     width: 70%;
-    margin: 0 auto;
+    margin: 0 15%;
     /*height: 100px;*/
-    left: 15%;
+    /*left: 15%;*/
+}
+
+#search span.slogan {
+    /*font-size: 34px;*/
+    margin-left: 34px;
+    margin-top: 24px;
+    float: left;
+    clear: both;
 }
 
 #search div.form_search {
     background-color: #fff;
     float: left;
+    position: relative;
     /*margin-left: 16%;*/
     /*padding-top: 23px;*/
     width: 63%;
-    height: 80px;
+    /*height: 80px;*/
 }
 
-#search div.form_search div.form_inputs{
-    padding-left: 25%;
-    /*padding-top: 26px;*/
-    float: left;
-    position: relative;
-    top: 25%;
+#search div.form_search span.form_inputs{
+    position: absolute;
+    margin-top: 2%;
+    /*margin-left: 20px;*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
 }
 
-#search div.form_search div.submit_div{
-    float: right;
-
+#search div.form_search span.submit_div{
+    float:right;
+    width: 11%;
 }
 
 div#search div.logo_slider{
@@ -654,6 +671,18 @@ div#search div.logo_slider{
     width: 81px;
 }
 
+
+.btn-primary {
+    background-color: #006DCC;
+    /*background-image: linear-gradient(to bottom, #0088CC, #0044CC);*/
+    /*background-repeat: repeat-x;*/
+    background-image: url("/media/images/search-icon.png");
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+
 #blog {
     background-color: red;
 }
@@ -662,6 +691,26 @@ div#property_info div.blog_banner {
 
 }
 
+
+/*CHAT*/
+#habla_window_div.olrk-fixed-bottom .habla_panel_border, #habla_window_div.olrk-fixed-bottom #habla_topbar_div {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+#habla_window_div .habla_offline_submit_input {
+    border-radius: 0px !important;
+}
+
+#habla_window_div input[type="submit"], #habla_window_div button {
+    font-size: 14px!important;
+    margin-top: 16px;
+    width: 188px!important;
+}
+
+#habla_window_div {
+    margin: 0 0;
+}
 
 /*------------------------------------------------------*/
 /*	Headline ( Homepage v1 )	*/
@@ -2746,6 +2795,29 @@ a img.aligncenter {
 	padding: 0 15px;
 	height: 40px;
 	margin-right: 20px;
+}
+
+
+
+/*********************************************************************/
+/*  SERVIÇOS */
+/*********************************************************************/
+
+
+#service_text {
+    background: none repeat scroll 0 0 #CCCCCC;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+#service_topics {
+    width: 50%;
+    float: left;
+    background-color: red;
+}
+
+#service_categories {
+    background-color: green;
 }
 
 /*-------------------------------------------------------------------*/
