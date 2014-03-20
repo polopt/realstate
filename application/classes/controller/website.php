@@ -15,10 +15,11 @@ class Controller_Website extends Controller_Template {
 // 'moderatorpanel' => array('login', 'moderator') will only allow users with the roles login and moderator to access action_moderatorpanel
     public $secure_actions = FALSE;
     public $lang_id;
-
+    public $full_width = FALSE;
 
     public function before()
     {
+//        var_dump("before");
         parent::before();
     }
 
@@ -28,10 +29,16 @@ class Controller_Website extends Controller_Template {
             $this->template->body->show_partners = $this->show_partners;
             $this->template->body->partners = new View('widgets/partners');
         } else {
-	    $this->template->body->show_partners = false;
-	    $this->template->body->partners = null;	
+            $this->template->body->show_partners = false;
+            $this->template->body->partners = null;
         }
-	parent::after();
+        if($this->full_width) {
+            $this->template->full_width_css = 'no-full';
+        } else {
+            $this->template->full_width_css = 'center_page';
+        }
+//        var_dump("after");die;
+	    parent::after();
     }
 
 }

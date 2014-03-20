@@ -33,7 +33,7 @@
         </script>
     </head>
     <body class="body_class-homepage html front not-logged-in no-sidebars page-homepage i18n-pt-pt">
-        <div id="center_page" class="container-full">
+        <div id="<?=$full_width_css?>" class="container-full">
             <?php echo $header;?>
             <?php echo $body; ?>
             <?php echo $footer;?>

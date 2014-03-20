@@ -1,6 +1,6 @@
 <div id="search" class="center-block">
     <form method="post" action="/search" class="navbar-form navbar-left" role="search">
-        <div class="logo_slider"><img src="/media/images/logo_80.jpg" /></div>
+        <div class="logo_slider"><img src="/media/images/logo_80.jpg" height="100%"/></div>
         <div class="form-group form_search">
                     <span class="slogan">
                         <a href="#">Investir</a> | <a href="#">Reabilitar</a> | <a href="#">Viver</a>

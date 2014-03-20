@@ -5,6 +5,7 @@ class Controller_Welcome extends Controller_Frontend {
     public function action_index()
     {
         //$this->show_partners = true;
+        $this->full_width = true;
         $view = new View('home/home');
         $this->template->header = null;
         $this->template->body = $view;
