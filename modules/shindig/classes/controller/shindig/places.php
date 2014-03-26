@@ -19,7 +19,7 @@ class Controller_Shindig_Places extends Controller_Shindig_Admin
         $n_walks = ORM::factory('house')->count_all();
 
 
-		$this->template->content = View::factory('shindig/admin/events')
+		$this->template->content = View::factory('shindig/admin/place/add')
 			->bind('form_title', $pagination)
 			->bind('posts', $posts);
 

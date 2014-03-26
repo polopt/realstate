@@ -14,8 +14,8 @@
 
 <div class="content-wrapper clearfix">
 <?=$slider?>
-<div id="property_list" class="container">
-    <div id="title-listing" class="container"></div>
+<div>
+<!--    <div id="title-listing" class="container"></div>-->
     <!-- /#title-listing -->
     <div class="row-fluid property-row">
 <!--        --><?php //for($i=0; $i<5; $i++): ?>
@@ -89,70 +89,6 @@
     <div class="row-fluid property-row">
         <img id="blog" src="/media/images/logo-naming.png" />
     </div>
-
-
-
-<!--    <div class="container carousel-wrapper">-->
-<!--        <div id="recent-title-listing" class="container">-->
-<!--            <div class="recent-property-list-title">--><?//=__("Artigos")?><!--</div>-->
-<!--            <div class="recent-property-list-by">-->
-<!--                <div class="jcarousel-control">-->
-<!--                    <a href="#" class="jcarousel-control-prev">-->
-<!--									<span class="icon-stack">-->
-<!--									  <i class="icon-stop icon-stack-base"></i>-->
-<!--									  <i class="icon-chevron-left"></i>-->
-<!--									</span>-->
-<!--                    </a>-->
-<!--                    <a href="#" class="jcarousel-control-next">-->
-<!--									<span class="icon-stack">-->
-<!--									  <i class="icon-stop icon-stack-base"></i>-->
-<!--									  <i class="icon-chevron-right"></i>-->
-<!--									</span>-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <!-- /#title-listing -->
-<!--        <div class="jcarousel container">-->
-<!--            <div class="jcontainer">-->
-<!--                <div class="span3">-->
-<!--                    <article class="property-item">-->
-<!--                        <div class="property-images">-->
-<!--                            <a href="property/detail" title=""><img width="540"-->
-<!--                                                                                                 height="360"-->
-<!--                                                                                                 src="uploads/dummy-540x360.png"-->
-<!--                                                                                                 class="status-35 wp-post-image"-->
-<!--                                                                                                 alt=""-->
-<!--                                                                                                 title=""/></a>-->
-<!---->
-<!--                            <div class="property-status status-35-text">On Sale</div>-->
-<!--                        </div>-->
-<!--                        <!-- /.property-images -->
-<!--                        <div class="property-attribute">-->
-<!--                            <h3 class="attribute-title"><a href="property-single.html" title="Florida 5, Pinecrest, FL">Florida-->
-<!--                                    5, Pinecrest, FL</a><i class="icon-heart"></i></h3>-->
-<!--                            <span class="attribute-city">Miami</span>-->
-<!---->
-<!--                            <div class="attribute-price">-->
-<!--                                <span class="attr-pricing"><sup class="price-curr">$</sup>16,000</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="property-meta clearfix">-->
-<!--                            <div class="meta-size meta-block"><i class="ico-size"></i><span-->
-<!--                                    class="meta-text">240M</span></div>-->
-<!--                            <div class="meta-bedroom meta-block"><i class="ico-bedroom"></i><span-->
-<!--                                    class="meta-text">3</span></div>-->
-<!--                            <div class="meta-bathroom meta-block"><i class="ico-bathroom"></i><span-->
-<!--                                    class="meta-text">5</span></div>-->
-<!--                        </div>-->
-<!--                    </article>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <!-- jcontainer -->
-<!--        </div>-->
-        <!-- /.jcarousel -->
-<!--    </div>-->
-    <!-- /.container -->
 </div>
 <?//new View("home/blog"); ?>
 <? if(isset($show_partners) && !is_null($show_partners) && $show_partners == true) : ?>

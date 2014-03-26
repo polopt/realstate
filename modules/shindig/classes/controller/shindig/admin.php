@@ -177,7 +177,7 @@ class Controller_Shindig_Admin extends Controller_Template
 			//Use Auth to login the user
 			Auth::instance()->login($_POST['username'], $_POST['password'], $remember);
 
-			if (!Auth::instance()->logged_in()) { 
+			if (!Auth::instance()->logged_in()) {
 				//just a simple error message if the login failed
 				$this->request->response = "Login Failed";
 				return;

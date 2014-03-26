@@ -539,6 +539,19 @@ code {
 	width:100%;
 }
 
+#up_hero_wrapper {
+    background: url("/media/images/background.jpg") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    height: 600px;
+}
+
+
+#why {
+    background: url("/media/images/background.jpg") repeat fixed center top / cover #252525;
+    color: #EEEEEE;
+    position: relative;
+}
+
 /*------------------------------------------------------*/
 /*	Slider ( Homepage v2 )	*/
 /*------------------------------------------------------*/
@@ -548,6 +561,20 @@ code {
 	margin:0 auto;
     background-size: cover;
     background: #CCC url('/media/images/background.jpg');
+}
+
+#slider_wrapper_new {
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    overflow:hidden;
+    background: #CCC url('/media/images/background.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .flex-caption{
@@ -657,6 +684,7 @@ code {
 div#search div.logo_slider{
     float: left;
     width: 37%;
+    background-image: ;
 }
 
 #search .logo_slider img {
@@ -706,6 +734,10 @@ div#property_info div.blog_banner {
 
 }
 
+
+.text-color {
+    background-color: #ffffff;
+}
 
 /*CHAT*/
 #habla_window_div.olrk-fixed-bottom .habla_panel_border, #habla_window_div.olrk-fixed-bottom #habla_topbar_div {
@@ -3075,8 +3107,8 @@ a img.aligncenter {
 		top:48px;
 	}
 	.flexslider .slides img {
-		max-width: 1200px;
-		width:1200px !important;
+		max-width: 1900px;
+		width:1900px !important;
 		margin:0 auto;
 	}
 
