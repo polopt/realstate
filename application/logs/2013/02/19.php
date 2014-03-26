@@ -1,0 +1,16 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2013-02-19 14:21:57 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-02-19 14:22:02 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-02-19 14:22:26 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-19 14:22:26 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-19 14:22:26 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-19 14:22:26 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-19 14:22:27 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-02-19 14:22:27 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-02-19 17:00:12 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-19 17:00:12 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-19 17:00:18 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-02-19 17:00:18 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-02-19 23:41:53 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/imagemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-19 23:41:53 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/imagemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]

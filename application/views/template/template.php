@@ -18,13 +18,8 @@
         <link rel='stylesheet' id='realexpert_font_awesome_css-css'  href='/media/library/font-awesome/css/font-awesome.min.css' type='text/css' media='all' />
         <link rel='stylesheet' id='realexpert_font_awesome_css_ie7-css'  href='/media/library/font-awesome/css/font-awesome-ie7.min.css' type='text/css' media='all' />
         <link rel='stylesheet' id='flexslider_css-css'  href='/media/library/flexslider/flexslider.css' type='text/css' media='all' />
-<!--        <link rel='stylesheet' id='default-style-css'  href='/media/css/style.css' type='text/css' media='all' />-->
         <link href="/media/css/popup.css" rel="stylesheet"/>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<!--        <script type='text/javascript' src='/media/js/jquery.js?ver=1.10.2'></script>-->
-<!--        <script type='text/javascript' src='/media/js/jquery-migrate.min.js?ver=1.2.1'></script>-->
-
-
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <link rel="stylesheet" href="/media/css/style.css" type="text/css" media="all" />
         <link rel='stylesheet' id=''  href='/media/css/main.css' type='text/css' media='all' />

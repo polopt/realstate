@@ -6,14 +6,13 @@
  * @group kohana
  * @group kohana.form
  *
- * @package    Kohana
- * @category   Tests
+ * @package    Unittest
  * @author     Kohana Team
  * @author     Jeremy Bush <contractfrombelow@gmail.com>
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2010 Kohana Team
  * @license    http://kohanaframework.org/license
  */
-class Kohana_FormTest extends Unittest_TestCase
+class Kohana_FormTest extends Kohana_Unittest_Testcase
 {
 	/**
 	 * Defaults for this test
@@ -22,33 +21,21 @@ class Kohana_FormTest extends Unittest_TestCase
 	protected $environmentDefault = array(
 		'Kohana::$base_url' => '/',
 		'HTTP_HOST' => 'kohanaframework.org',
-		'Kohana::$index_file' => '',
 	);
 
 	/**
 	 * Provides test data for test_open()
-	 *
+	 * 
 	 * @return array
 	 */
 	public function provider_open()
 	{
 		return array(
-			array(
-				  array('', NULL),
-				  array('action' => '')
-			),
-			array(
-				  array(NULL, NULL),
-				  array('action' => '')
-			),
-			array(
-				  array('foo', NULL),
-				  array('action' => '/foo')
-			),
-			array(
-				  array('foo', array('method' => 'get')),
-				  array('action' => '/foo', 'method' => 'get')
-			),
+			// $value, $result
+			#array(NULL, NULL, '<form action="/" method="post" accept-charset="utf-8">'), // Fails because of Request::$current
+			array('foo', NULL),
+			array('', NULL),
+			array('foo', array('method' => 'get')),
 		);
 	}
 
@@ -60,23 +47,21 @@ class Kohana_FormTest extends Unittest_TestCase
 	 * @param boolean $input  Input for Form::open
 	 * @param boolean $expected Output for Form::open
 	 */
-	public function test_open($input, $expected)
+	public function test_open($action, $attributes)
 	{
-		list($action, $attributes) = $input;
-
 		$tag = Form::open($action, $attributes);
 
 		$matcher = array(
 			'tag' => 'form',
-			// Default attributes
 			'attributes' => array(
-				'method'         => 'post',
+				'method' => 'post',
 				'accept-charset' => 'utf-8',
 			),
 		);
-
-		$matcher['attributes'] = $expected + $matcher['attributes'];
-
+		
+		if($attributes !== NULL)
+			$matcher['attributes'] = $attributes + $matcher['attributes'];
+		
 		$this->assertTag($matcher, $tag);
 	}
 
@@ -92,7 +77,7 @@ class Kohana_FormTest extends Unittest_TestCase
 
 	/**
 	 * Provides test data for test_input()
-	 *
+	 * 
 	 * @return array
 	 */
 	public function provider_input()
@@ -122,22 +107,16 @@ class Kohana_FormTest extends Unittest_TestCase
 		);
 
 		// Form::input creates a text input
-		if ($type === 'input')
-		{
+		if($type === 'input')
 			$matcher['attributes']['type'] = 'text';
-		}
 
 		// NULL just means no value
-		if ($value !== NULL)
-		{
+		if($value !== NULL)
 			$matcher['attributes']['value'] = $value;
-		}
 
 		// Add on any attributes
-		if (is_array($attributes))
-		{
+		if(is_array($attributes))
 			$matcher['attributes'] = $attributes + $matcher['attributes'];
-		}
 
 		$tag = Form::$type($name, $value, $attributes);
 
@@ -146,7 +125,7 @@ class Kohana_FormTest extends Unittest_TestCase
 
 	/**
 	 * Provides test data for test_file()
-	 *
+	 * 
 	 * @return array
 	 */
 	public function provider_file()
@@ -172,7 +151,7 @@ class Kohana_FormTest extends Unittest_TestCase
 
 	/**
 	 * Provides test data for test_check()
-	 *
+	 * 
 	 * @return array
 	 */
 	public function provider_check()
@@ -182,7 +161,7 @@ class Kohana_FormTest extends Unittest_TestCase
 			array('checkbox', 'foo', NULL, FALSE, NULL),
 			array('checkbox', 'foo', NULL, TRUE, NULL),
 			array('checkbox', 'foo', 'bar', TRUE, NULL),
-
+			
 			array('radio', 'foo', NULL, FALSE, NULL),
 			array('radio', 'foo', NULL, TRUE, NULL),
 			array('radio', 'foo', 'bar', TRUE, NULL),
@@ -201,20 +180,14 @@ class Kohana_FormTest extends Unittest_TestCase
 	{
 		$matcher = array('tag' => 'input', 'attributes' => array('name' => $name, 'type' => $type));
 
-		if ($value !== NULL)
-		{
+		if($value !== NULL)
 			$matcher['attributes']['value'] = $value;
-		}
 
-		if (is_array($attributes))
-		{
+		if(is_array($attributes))
 			$matcher['attributes'] = $attributes + $matcher['attributes'];
-		}
 
-		if ($checked === TRUE)
-		{
+		if($checked === TRUE)
 			$matcher['attributes']['checked'] = 'checked';
-		}
 
 		$tag = Form::$type($name, $value, $checked, $attributes);
 		$this->assertTag($matcher, $tag, $tag);
@@ -222,7 +195,7 @@ class Kohana_FormTest extends Unittest_TestCase
 
 	/**
 	 * Provides test data for test_text()
-	 *
+	 * 
 	 * @return array
 	 */
 	public function provider_text()
@@ -253,20 +226,14 @@ class Kohana_FormTest extends Unittest_TestCase
 			'content' => $body,
 		);
 
-		if ($type !== 'label')
-		{
+		if($type !== 'label')
 			$matcher['attributes'] = array('name' => $name);
-		}
 		else
-		{
 			$matcher['attributes'] = array('for' => $name);
-		}
 
 
-		if (is_array($attributes))
-		{
+		if(is_array($attributes))
 			$matcher['attributes'] = $attributes + $matcher['attributes'];
-		}
 
 		$tag = Form::$type($name, $body, $attributes);
 
@@ -276,7 +243,7 @@ class Kohana_FormTest extends Unittest_TestCase
 
 	/**
 	 * Provides test data for test_select()
-	 *
+	 * 
 	 * @return array
 	 */
 	public function provider_select()
@@ -309,7 +276,7 @@ class Kohana_FormTest extends Unittest_TestCase
 
 	/**
 	 * Provides test data for test_submit()
-	 *
+	 * 
 	 * @return array
 	 */
 	public function provider_submit()
@@ -334,14 +301,14 @@ class Kohana_FormTest extends Unittest_TestCase
 			'tag' => 'input',
 			'attributes' => array('name' => $name, 'type' => 'submit', 'value' => $value)
 		);
-
+			
 		$this->assertTag($matcher, Form::submit($name, $value));
 	}
 
 
 	/**
 	 * Provides test data for test_image()
-	 *
+	 * 
 	 * @return array
 	 */
 	public function provider_image()
@@ -368,11 +335,11 @@ class Kohana_FormTest extends Unittest_TestCase
 	}
 
 	/**
-	 * Provides test data for test_label()
-	 *
+	 * Provides test data for testLabel()
+	 * 
 	 * @return array
 	 */
-	function provider_label()
+	function providerLabel()
 	{
 		return array(
 			// $value, $result
@@ -392,13 +359,13 @@ class Kohana_FormTest extends Unittest_TestCase
 	 * Tests Form::label()
 	 *
 	 * @test
-	 * @dataProvider provider_label
+	 * @dataProvider providerLabel
 	 * @param boolean $for         Input for Form::label
 	 * @param boolean $text        Input for Form::label
 	 * @param boolean $attributes  Input for Form::label
 	 * @param boolean $expected    Output for Form::label
 	 */
-	function test_label($for, $text, $attributes, $expected)
+	function testLabel($for, $text, $attributes, $expected)
 	{
 		$this->assertSame($expected, Form::label($for, $text, $attributes));
 	}

@@ -1,0 +1,17 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2013-02-21 07:16:56 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-02-21 07:17:13 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-21 07:17:13 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-21 07:17:14 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-02-21 07:17:14 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-02-21 13:31:43 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-02-21 13:31:46 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-02-21 13:44:40 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-02-21 13:44:42 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-02-21 13:44:50 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-21 13:44:50 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 28 ]
+2013-02-21 13:44:50 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-02-21 13:44:50 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-02-21 13:45:04 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-02-21 13:46:04 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]

@@ -1,12 +1,12 @@
 # Cascading Filesystem
 
-The Kohana filesystem is a hierarchy of similar directory structures that cascade. The hierarchy in Kohana (used when a file is loaded by [Kohana::find_file]) is in the following order:
+The Kohana filesystem is a heirarchy of similar directory structures that cascade. The heirarchy in Kohana (used when a file is loaded by [Kohana::find_file]) is in the following order:
 
 1. **Application Path**  
    Defined as `APPPATH` in `index.php`. The default value is `application`.
 
 2. **Module Paths**  
-   This is set as an associative array using [Kohana::modules] in `APPPATH/bootstrap.php`. Each of the values of the array will be searched **in the order that the modules are defined**.
+   This is set as an associative array using [Kohana::modules] in `APPPATH/bootstrap.php`. Each of the values of the array will be searched **in the order that the modules are added**.
 
 3. **System Path**  
    Defined as `SYSPATH` in `index.php`. The default value is `system`. All of the main or "core" files and classes are defined here.
@@ -35,7 +35,7 @@ classes/
 :  All classes that you want to [autoload](autoloading) should be stored here. This includes [controllers](mvc/controllers), [models](mvc/models), and all other classes. All classes must follow the [class naming conventions](conventions#class-names-and-file-location).
 
 config/
-:  Configuration files return an associative array of options that can be loaded using [Kohana::$config]. Config files are merged rather than overwritten by the cascade. See [config files](files/config) for more information.
+:  Configuration files return an associative array of options that can be loaded using [Kohana::config]. Config files are merged rather than overwritten by the cascade. See [config files](files/config) for more information.
 
 i18n/
 :  Translation files return an associative array of strings. Translation is done using the `__()` method. To translate "Hello, world!" into Spanish, you would call `__('Hello, world!')` with [I18n::$lang] set to "es-es". I18n files are merged rather than overwritten by the cascade. See [I18n files](files/i18n) for more information.

@@ -1,0 +1,62 @@
+<?php defined('SYSPATH') or die('No direct script access.');
+
+class Controller_Shindig_Services extends Controller_Shindig_Admin
+{
+	
+	public function __construct(Request $request)
+	{
+		parent::__construct($request);
+	}
+
+	
+	public function action_add()
+	{
+		$this->template->content = View::factory('shindig/admin/services/add')
+				->bind('service', $service)
+				->bind('msg', $msg)
+				->bind('msg_error', $msg_error);
+		$msg = "";
+		$msg_error = "";
+		if($_POST) {
+			$service_id = $_POST['service_id'];
+			$service = ORM::factory('service');
+			$service->save();	
+		}
+	}
+
+	public function action_list() {
+		$ipp = 15;
+        	$n_services = ORM::factory('service')->count_all();
+		$this->template->content = View::factory('shindig/admin/services/list')
+			->bind('form_title', $pagination)
+			->bind('services', $services);
+				
+		$services = ORM::factory('service')->find_all();
+		//$id = Request::instance()->param('id');
+
+		/*if (!empty($id)) {
+			$photo = ORM::factory('service')->find($id);
+			$photo->deleteImg($photo->name);
+		}
+		
+		if(isset($_POST["actividade"]) && $_POST["actividade"] != 0) {
+			$photos = ORM::factory('photo')->where("is_background", "=", 0)->where("event_id", "=", $_POST["actividade"])->find_all();
+			$event = $_POST["actividade"];
+			$event_name = ORM::factory('event')->find($_POST["actividade"])->name;
+		} else {
+			$photos = ORM::factory('photo')->where("is_background", "=", 0)->find_all();
+		}
+		$month = date('d-m-Y');
+		$events = ORM::factory('event')->find_all();*/
+		
+		$this->template->content->pagination = new Pagination(array(
+                    'current_page' => array('source' => 'query_string', 'key' => 'page'),
+	            'total_items' => $n_services,
+                    'items_per_page' => $ipp,
+                    'view' => 'pagination/floating',
+                    'auto_hide' => TRUE,
+                    'first_page_in_url' => FALSE,
+                ));
+	}
+	
+}

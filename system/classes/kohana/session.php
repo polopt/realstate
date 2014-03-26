@@ -5,7 +5,7 @@
  * @package    Kohana
  * @category   Session
  * @author     Kohana Team
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2010 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 abstract class Kohana_Session {
@@ -18,7 +18,7 @@ abstract class Kohana_Session {
 	/**
 	 * @var  array  session instances
 	 */
-	public static $instances = array();
+	protected static $instances = array();
 
 	/**
 	 * Creates a singleton session of the given type. Some session types
@@ -32,7 +32,7 @@ abstract class Kohana_Session {
 	 * @param   string   type of session (native, cookie, etc)
 	 * @param   string   session identifier
 	 * @return  Session
-	 * @uses    Kohana::$config
+	 * @uses    Kohana::config
 	 */
 	public static function instance($type = NULL, $id = NULL)
 	{
@@ -45,7 +45,7 @@ abstract class Kohana_Session {
 		if ( ! isset(Session::$instances[$type]))
 		{
 			// Load the configuration for this type
-			$config = Kohana::$config->load('session')->get($type);
+			$config = Kohana::config('session')->get($type);
 
 			// Set the session class name
 			$class = 'Session_'.ucfirst($type);
@@ -294,11 +294,9 @@ abstract class Kohana_Session {
 	 */
 	public function read($id = NULL)
 	{
-		$data = NULL;
-
-		try
+		if (is_string($data = $this->_read($id)))
 		{
-			if (is_string($data = $this->_read($id)))
+			try
 			{
 				if ($this->_encrypted)
 				{
@@ -314,16 +312,10 @@ abstract class Kohana_Session {
 				// Unserialize the data
 				$data = unserialize($data);
 			}
-			else
+			catch (Exception $e)
 			{
-				// Ignore these, session is valid, likely no data though.
+				// Ignore all reading errors
 			}
-		}
-		catch (Exception $e)
-		{
-			// Error reading the session, usually
-			// a corrupt session.
-			throw new Session_Exception('Error reading session data.', NULL, Session_Exception::SESSION_CORRUPT);
 		}
 
 		if (is_array($data))
@@ -376,7 +368,7 @@ abstract class Kohana_Session {
 		catch (Exception $e)
 		{
 			// Log & ignore all errors when a write fails
-			Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e))->write();
+			Kohana::$log->add(Kohana::ERROR, Kohana::exception_text($e))->write();
 
 			return FALSE;
 		}
@@ -401,27 +393,6 @@ abstract class Kohana_Session {
 		}
 
 		return $this->_destroyed;
-	}
-
-	/**
-	 * Restart the session.
-	 *
-	 *     $success = $session->restart();
-	 *
-	 * @return  boolean
-	 */
-	public function restart()
-	{
-		if ($this->_destroyed === FALSE)
-		{
-			// Wipe out the current session.
-			$this->destroy();
-		}
-
-		// Allow the new session to be saved
-		$this->_destroyed = FALSE;
-
-		return $this->_restart();
 	}
 
 	/**
@@ -452,12 +423,5 @@ abstract class Kohana_Session {
 	 * @return  boolean
 	 */
 	abstract protected function _destroy();
-
-	/**
-	 * Restarts the current session.
-	 *
-	 * @return  boolean
-	 */
-	abstract protected function _restart();
 
 } // End Session

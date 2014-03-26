@@ -27,7 +27,7 @@
                         </div>
                         <div class="service_content">
                             <h4>House Hunting</h4>
-                            <p>It is a long established fact that a reader will be distracted by the </p>
+                            <p>Confie-nos a pesquisa do seu imóvel - procuramos no mercado a solução mais adequada aos seus requisitos. </p>
                             <p class="see_more"><a href="#"><img src="/media/images/andyou.jpg" /></a></a></p>
                         </div>
                     </div>

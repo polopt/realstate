@@ -28,4 +28,28 @@ class Controller_Welcome extends Controller_Frontend {
         }
         $this->auto_render = false;
     }
+
+    public function action_page()
+    {
+        $this->body = View::factory('home/page')
+            ->bind('page', $page);
+
+        $slug = $this->request->param('slug');
+
+        $this->selected_menu = $slug;
+
+        $page = Sprig::factory('shindig_post')
+            ->values(array(
+                'slug'=>$slug,
+                'type'=>'page',
+                'status'=>'publish',
+            ))
+            ->load();
+
+        if( ! $page->loaded() )
+        {
+            throw new Shindig_Exception(__('Page ":page" Not Found'), array(':page'=>$slug), 404);
+        }
+    }
+
 } // End Welcome

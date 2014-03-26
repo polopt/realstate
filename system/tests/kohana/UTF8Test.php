@@ -5,13 +5,12 @@
  * @group kohana
  * @group kohana.utf8
  *
- * @package    Kohana
- * @category   Tests
+ * @package    Unittest
  * @author     Kohana Team
- * @copyright  (c) 2008-2011 Kohana Team
+ * @copyright  (c) 2008-2010 Kohana Team
  * @license    http://kohanaframework.org/license
  */
-class Kohana_UTF8Test extends Unittest_TestCase
+class Kohana_UTF8Test extends Kohana_Unittest_TestCase
 {
 
 	/**
@@ -158,6 +157,9 @@ class Kohana_UTF8Test extends Unittest_TestCase
 	public function test_strlen($input, $expected)
 	{
 		$this->assertSame($expected, UTF8::strlen($input));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
+		$this->assertSame($expected, UTF8::strlen($input));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
 	}
 
 	/**
@@ -180,6 +182,9 @@ class Kohana_UTF8Test extends Unittest_TestCase
 	public function test_strpos($input, $str, $offset, $expected)
 	{
 		$this->assertSame($expected, UTF8::strpos($input, $str, $offset));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
+		$this->assertSame($expected, UTF8::strpos($input, $str, $offset));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
 	}
 
 	/**
@@ -202,6 +207,9 @@ class Kohana_UTF8Test extends Unittest_TestCase
 	public function test_strrpos($input, $str, $offset, $expected)
 	{
 		$this->assertSame($expected, UTF8::strrpos($input, $str, $offset));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
+		$this->assertSame($expected, UTF8::strrpos($input, $str, $offset));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
 	}
 
 	/**
@@ -226,6 +234,9 @@ class Kohana_UTF8Test extends Unittest_TestCase
 	public function test_substr($input, $offset, $length, $expected)
 	{
 		$this->assertSame($expected, UTF8::substr($input, $offset, $length));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
+		$this->assertSame($expected, UTF8::substr($input, $offset, $length));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
 	}
 
 	/**
@@ -270,6 +281,9 @@ class Kohana_UTF8Test extends Unittest_TestCase
 	public function test_strtolower($input, $expected)
 	{
 		$this->assertSame($expected, UTF8::strtolower($input));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
+		$this->assertSame($expected, UTF8::strtolower($input));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
 	}
 
 	/**
@@ -292,6 +306,9 @@ class Kohana_UTF8Test extends Unittest_TestCase
 	public function test_strtoupper($input, $expected)
 	{
 		$this->assertSame($expected, UTF8::strtoupper($input));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
+		$this->assertSame($expected, UTF8::strtoupper($input));
+		UTF8::$server_utf8 = ! UTF8::$server_utf8;
 	}
 
 	/**
@@ -483,7 +500,7 @@ class Kohana_UTF8Test extends Unittest_TestCase
 	 * Tests UTF8::str_pad error
 	 *
 	 * @test
-	 * @expectedException UTF8_Exception
+	 * @expectedException Exception
 	 */
 	public function test_str_pad_error()
 	{

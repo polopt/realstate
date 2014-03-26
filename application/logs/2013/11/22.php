@@ -1,0 +1,16 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2013-11-22 00:34:20 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 00:34:20 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 00:35:39 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 00:35:39 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 01:36:19 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 01:36:19 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 01:50:58 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 01:50:58 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 01:52:19 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 01:52:19 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 02:53:19 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 02:53:19 --- ERROR: ErrorException [ 2 ]: Missing argument 1 for Controller_Caminhadas::action_detalhe() ~ APPPATH/classes/controller/caminhadas.php [ 39 ]
+2013-11-22 03:05:21 --- ERROR: ReflectionException [ -1 ]: Class controller_diversos does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]
+2013-11-22 03:05:21 --- ERROR: ReflectionException [ -1 ]: Class controller_diversos does not exist ~ SYSPATH/classes/kohana/request.php [ 1178 ]

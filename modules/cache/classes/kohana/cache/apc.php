@@ -36,20 +36,20 @@
  * @copyright  (c) 2009-2010 Kohana Team
  * @license    http://kohanaphp.com/license
  */
-class Kohana_Cache_Apc extends Cache implements Cache_Arithmetic {
+class Kohana_Cache_Apc extends Cache {
 
 	/**
 	 * Check for existence of the APC extension This method cannot be invoked externally. The driver must
 	 * be instantiated using the `Cache::instance()` method.
 	 *
 	 * @param  array     configuration
-	 * @throws Cache_Exception
+	 * @throws Kohana_Cache_Exception
 	 */
 	protected function __construct(array $config)
 	{
 		if ( ! extension_loaded('apc'))
 		{
-			throw new Cache_Exception('PHP APC extension is not available.');
+			throw new Kohana_Cache_Exception('PHP APC extension is not available.');
 		}
 
 		parent::__construct($config);
@@ -67,13 +67,11 @@ class Kohana_Cache_Apc extends Cache implements Cache_Arithmetic {
 	 * @param   string   id of cache to entry
 	 * @param   string   default value to return if cache miss
 	 * @return  mixed
-	 * @throws  Cache_Exception
+	 * @throws  Kohana_Cache_Exception
 	 */
 	public function get($id, $default = NULL)
 	{
-		$data = apc_fetch($this->_sanitize_id($id), $success);
-
-		return $success ? $data : $default;
+		return (($data = apc_fetch($this->_sanitize_id($id))) === FALSE) ? $default : $data;
 	}
 
 	/**
@@ -132,35 +130,4 @@ class Kohana_Cache_Apc extends Cache implements Cache_Arithmetic {
 	{
 		return apc_clear_cache('user');
 	}
-
-	/**
-	 * Increments a given value by the step value supplied.
-	 * Useful for shared counters and other persistent integer based
-	 * tracking.
-	 *
-	 * @param   string    id of cache entry to increment
-	 * @param   int       step value to increment by
-	 * @return  integer
-	 * @return  boolean
-	 */
-	public function increment($id, $step = 1)
-	{
-		return apc_inc($id, $step);
-	}
-
-	/**
-	 * Decrements a given value by the step value supplied.
-	 * Useful for shared counters and other persistent integer based
-	 * tracking.
-	 *
-	 * @param   string    id of cache entry to decrement
-	 * @param   int       step value to decrement by
-	 * @return  integer
-	 * @return  boolean
-	 */
-	public function decrement($id, $step = 1)
-	{
-		return apc_dec($id, $step);
-	}
-
-} // End Kohana_Cache_Apc
+}

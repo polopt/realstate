@@ -1,18 +1,17 @@
 <?php
 
-class Model_Company extends ORM {
+class Model_Service extends ORM {
 
-    protected $_has_many = array(
-        'places' => array('model' => 'place')
+    protected $_belongs_to = array(
+        'house' => array('model' => 'house'),
     );
-    
-    protected $_rules = array(
-            'name' => array(
-            'not_empty' => NULL,
-            'min_length' => array(2),
-            'max_length' => array(50),
-        ),
-    );
+//    protected $_rules = array(
+//            'name' => array(
+//            'not_empty' => NULL,
+//            'min_length' => array(2),
+//            'max_length' => array(50),
+//        ),
+//    );
 }
 
 ?>

@@ -21,13 +21,27 @@ Route::set('shindig/admin', 'shindig/admin((/<id>)/<action>)', array('id' => '\d
 		'action'     => 'list',
 	));
 
-Route::set('shindig/admin/events', 'shindig/admin/events((/<id>)/<action>)', array('id' => '\d+'))	
-	->defaults(array(
-		'directory'  => 'shindig',
-		'controller' => 'event',
-		'action'     => 'list',
-	));
 
+Route::set('shindig/admin/places', 'shindig/admin/places((/<id>)/<action>)', array('id' => '\d+'))
+    ->defaults(array(
+        'directory'  => 'shindig',
+        'controller' => 'places',
+        'action'     => 'list',
+    ));
+
+Route::set('shindig/admin/services', 'shindig/admin/services((/<id>)/<action>)', array('id' => '\d+'))
+    ->defaults(array(
+        'directory'  => 'shindig',
+        'controller' => 'services',
+        'action'     => 'list',
+    ));
+
+Route::set('shindig/admin/services', 'shindig/admin/services((/<id>)/<action>)', array('id' => '\d+'))
+    ->defaults(array(
+        'directory'  => 'shindig',
+        'controller' => 'services',
+        'action'     => 'add',
+    ));
 
 Route::set('shindig/admin/photos', 'shindig/admin/photos((/<id>)/<action>)', array('id' => '\d+'))	
 	->defaults(array(

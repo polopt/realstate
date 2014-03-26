@@ -1,0 +1,15 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2013-02-16 11:28:26 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/imagemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 11:28:26 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/filemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 11:28:26 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/filemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 11:28:26 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/imagemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 16:33:46 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/filemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 16:33:46 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/imagemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 16:33:46 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/filemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 16:33:46 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/imagemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 16:39:28 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/imagemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 16:39:28 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/filemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 16:39:28 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/filemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 16:39:28 --- ERROR: Shindig_Exception [ 0 ]: File does not exist: tinymce/plugins/imagemanager/editor_plugin.js ~ MODPATH/shindig/classes/controller/shindig/media.php [ 21 ]
+2013-02-16 23:12:56 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: apple-touch-icon-precomposed.png ~ SYSPATH/classes/kohana/request.php [ 676 ]

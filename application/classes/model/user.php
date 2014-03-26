@@ -2,14 +2,10 @@
 
 class Model_User extends Model_Auth_User {
 
-//    protected $_has_many = array(
-//        'user_tokens'	=> array('model' => 'user_token'), //Auth module
-//        'roles'		=> array('model' => 'role', 'through' => 'roles_users'), //Auth module
-//        'images'        => array('model' => 'image', 'through' => 'images_users'),
-//		'rooms'        => array('model' => 'room', 'through' => 'users_rooms'),
-//        'visits'	=> array('model' => 'visit'),
-//		'articles'	=> array('model' => 'article'),
-//    );
+    protected $_has_many = array(
+        'user_tokens'	=> array('model' => 'user_token'), //Auth module
+        'roles'		=> array('model' => 'role', 'through' => 'roles_users') //Auth module
+    );
 //
 //    protected $_ignored_columns = array('payments', 'password_conf', 'is_vendor');
 //    protected $_filters = array(
@@ -35,24 +31,22 @@ class Model_User extends Model_Auth_User {
 //        'password' => array('trim' => NULL),
 ////        'shop_description' => array('trim' => NULL),
 //    );
-//    protected $_rules = array(
-//            'username' => array(
-//            'not_empty' => NULL,
-//            'min_length' => array(4),
-//            'max_length' => array(30),
-//            'Model_User::unique_username' => NULL,
-//            'Model_User::regex_username' => NULL
-//        ),
-//        'firstname' => array(
-//            'not_empty' => NULL,
-//            'min_length' => array(3),
-//            'max_length' => array(50),
-//        ),
-//        'lastname' => array(
-//            'not_empty' => NULL,
-//            'min_length' => array(3),
-//            'max_length' => array(50),
-//        ),
+    protected $_rules = array(
+            'username' => array(
+            'not_empty' => NULL,
+            'min_length' => array(4),
+            'max_length' => array(30),
+        ),
+        'firstname' => array(
+            'not_empty' => NULL,
+            'min_length' => array(3),
+            'max_length' => array(50),
+        ),
+        'lastname' => array(
+            'not_empty' => NULL,
+            'min_length' => array(3),
+            'max_length' => array(50),
+        ),
 //        'email' => array(
 //            'not_empty' => NULL,
 //            'min_length' => array(4),
@@ -60,10 +54,10 @@ class Model_User extends Model_Auth_User {
 //            'email' => NULL,
 //            'Model_User::unique_email' => NULL
 //        ),
-//        'password' => array(
-//            'not_empty' => NULL,
-//            'min_length' => array(6),
-//        ),
+        'password' => array(
+            'not_empty' => NULL,
+            'min_length' => array(6),
+        ));
 //        'password_conf' => array(
 //            'matches' => array('password'),
 //        ),

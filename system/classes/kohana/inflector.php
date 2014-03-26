@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php defined('SYSPATH') or die('No direct access allowed.');
 /**
  * Inflector helper class. Inflection is changing the form of a word based on
  * the context it is used in. For example, changing a word into a plural form.
@@ -8,7 +8,7 @@
  * @package    Kohana
  * @category   Helpers
  * @author     Kohana Team
- * @copyright  (c) 2007-2011 Kohana Team
+ * @copyright  (c) 2007-2010 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_Inflector {
@@ -47,7 +47,7 @@ class Kohana_Inflector {
 		if (Inflector::$uncountable === NULL)
 		{
 			// Cache uncountables
-			Inflector::$uncountable = Kohana::$config->load('inflector')->uncountable;
+			Inflector::$uncountable = Kohana::config('inflector')->uncountable;
 
 			// Make uncountables mirrored
 			Inflector::$uncountable = array_combine(Inflector::$uncountable, Inflector::$uncountable);
@@ -99,7 +99,7 @@ class Kohana_Inflector {
 		if (empty(Inflector::$irregular))
 		{
 			// Cache irregular words
-			Inflector::$irregular = Kohana::$config->load('inflector')->irregular;
+			Inflector::$irregular = Kohana::config('inflector')->irregular;
 		}
 
 		if ($irregular = array_search($str, Inflector::$irregular))
@@ -176,7 +176,7 @@ class Kohana_Inflector {
 		if (empty(Inflector::$irregular))
 		{
 			// Cache irregular words
-			Inflector::$irregular = Kohana::$config->load('inflector')->irregular;
+			Inflector::$irregular = Kohana::config('inflector')->irregular;
 		}
 
 		if (isset(Inflector::$irregular[$str]))

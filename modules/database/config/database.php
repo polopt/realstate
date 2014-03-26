@@ -20,7 +20,7 @@ return array
      * Ports and sockets may be appended to the hostname.
      */
     'hostname' => 'localhost',
-    'database' => 'camping',
+    'database' => 'andyou',
     'username' => 'root',
     'password' => 'megoch',
     'persistent' => FALSE,
@@ -30,7 +30,7 @@ return array
 'caching' => FALSE,
 'profiling' => TRUE,
 ),
-'blog' => array
+'prod' => array
 (
 'type' => 'mysql',
 'connection' => array(
@@ -46,7 +46,7 @@ return array
      * Ports and sockets may be appended to the hostname.
      */
     'hostname' => 'localhost',
-    'database' => 'blog',
+    'database' => 'mesfantasmes_prod',
     'username' => 'root',
     'password' => 'megoch',
     'persistent' => FALSE,
@@ -56,4 +56,30 @@ return array
 'caching' => FALSE,
 'profiling' => TRUE,
 ),
+//	'alternate' => array(
+//		'type'       => 'pdo',
+//		'connection' => array(
+//			/**
+//			 * The following options are available for PDO:
+//			 *
+//			 * string   dsn         Data Source Name
+//			 * string   username    database username
+//			 * string   password    database password
+//			 * boolean  persistent  use persistent connections?
+//			 */
+//			'dsn'        => 'mysql:host=localhost;dbname=kohana',
+//			'username'   => 'root',
+//			'password'   => 'r00tdb',
+//			'persistent' => FALSE,
+//		),
+//		/**
+//		 * The following extra options are available for PDO:
+//		 *
+//		 * string   identifier  set the escaping identifier
+//		 */
+//		'table_prefix' => '',
+//		'charset'      => 'utf8',
+//		'caching'      => FALSE,
+//		'profiling'    => TRUE,
+//	),
 );

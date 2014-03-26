@@ -12,6 +12,14 @@ Tags:white,two-columns,flexible-width,custom-background,threaded-comments
 /*--------------------------------------------------------------------------------*/
 /*	Default Element Styling */
 /*--------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "gill";
+    src: url("/media/fonts/GillSansLight.ttf");
+}
+
+
+
 /*-- Default font family goes here --*/
 body{
 	font-family:ProximaNova, Arial, sans-serif;
@@ -2815,6 +2823,15 @@ a img.aligncenter {
     background: none repeat scroll 0 0 #CCCCCC;
     height: 400px;
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#slideshow_contact {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 #service_topics {
@@ -2825,6 +2842,7 @@ a img.aligncenter {
 
 #service_categories {
     background-color: green;
+    float: right;
 }
 
 /*-------------------------------------------------------------------*/

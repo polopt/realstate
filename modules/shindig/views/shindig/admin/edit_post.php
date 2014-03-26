@@ -22,11 +22,6 @@
  <?php echo $post->input('post_content', array('class'=>'span-15')) ?>
 </div>
 
-<!--<dl>
- <dt><?php echo $post->label('post_excerpt') ?></dt>
- <dd><?php echo $post->input('post_excerpt', array('class'=>'span-15')) ?></dd>
-</dl>-->
- 
 <?php echo form::button('shindig_post', __('Submit')) ?>
 
 </div>

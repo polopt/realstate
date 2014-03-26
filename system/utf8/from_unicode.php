@@ -4,7 +4,7 @@
  *
  * @package    Kohana
  * @author     Kohana Team
- * @copyright  (c) 2007-2011 Kohana Team
+ * @copyright  (c) 2007-2010 Kohana Team
  * @copyright  (c) 2005 Harry Fuecks
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
  */
@@ -36,10 +36,8 @@ function _from_unicode($arr)
 		elseif ($arr[$k] >= 0xD800 AND $arr[$k] <= 0xDFFF)
 		{
 			// Found a surrogate
-			throw new UTF8_Exception("UTF8::from_unicode: Illegal surrogate at index: ':index', value: ':value'", array(
-				':index' => $k,
-				':value' => $arr[$k],
-			));
+			trigger_error('UTF8::from_unicode: Illegal surrogate at index: '.$k.', value: '.$arr[$k], E_USER_WARNING);
+			return FALSE;
 		}
 		// 3 byte sequence
 		elseif ($arr[$k] <= 0xffff)
@@ -59,10 +57,8 @@ function _from_unicode($arr)
 		// Out of range
 		else
 		{
-			throw new UTF8_Exception("UTF8::from_unicode: Codepoint out of Unicode range at index: ':index', value: ':value'", array(
-				':index' => $k,
-				':value' => $arr[$k],
-			));
+			trigger_error('UTF8::from_unicode: Codepoint out of Unicode range at index: '.$k.', value: '.$arr[$k], E_USER_WARNING);
+			return FALSE;
 		}
 	}
 

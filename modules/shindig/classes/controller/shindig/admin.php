@@ -7,11 +7,11 @@ class Controller_Shindig_Admin extends Controller_Template
 	public $template = 'shindig/template';
 	public $user;
 
-	public function __construct(Request $request, Response $response)
+	public function __construct(Request $request)
 	{
-		parent::__construct($request, $response);
+		parent::__construct($request);
 
-		if (!Kohana::$config->load('shindig.use_authentication')) {
+		if (!Kohana::config('shindig.use_authentication')) {
 			// Redirect to the home page
 			$this->request->redirect('');
 		}
@@ -45,8 +45,7 @@ class Controller_Shindig_Admin extends Controller_Template
 
 	public function action_list()
 	{
-//		$id = Request::instance()->param('id');
-        $id = Request::$current->param('id');
+		$id = Request::instance()->param('id');
 		$not_remove = array(12,11,10);
 		if (!empty($id)) {
 			if(!in_array($id, $not_remove)) {
@@ -106,9 +105,10 @@ class Controller_Shindig_Admin extends Controller_Template
 		
 		if ($_POST) {
 			$user->values($_POST);
-			if (!$user->check()) {
-				$this->template->content->errors = $user->errors();
-			} else {
+//			if (!$user->) {
+////				$this->template->content->errors = $user->errors();
+//                var_dump("ERROR");die;
+//			} else {
 				$user->save();
 				if(is_null($id)) {
 					$roleObj = ORM::factory('role')->where('name', '=', 'login')->find();
@@ -125,7 +125,7 @@ class Controller_Shindig_Admin extends Controller_Template
 				
 				$this->request->redirect(Route::get('shindig/admin')->uri(array('action' => 'list_users')));
 			}
-		}
+//		}
 	}
 
 	
@@ -346,13 +346,15 @@ class Controller_Shindig_Admin extends Controller_Template
 				$this->template->menu = array(
 					Route::get('shindig/admin')->uri(array('action' => 'config')) => __('Configurações gerais'),
 					Route::get('shindig/admin')->uri() => __('Lista de Paginas'),
-//					Route::get('shindig/admin')->uri(array('action' => 'create')) => __('Nova Pagina'),
-					Route::get('shindig/admin/events')->uri(array('action' => 'list')) => __('Lista de Actividades'),
+					Route::get('shindig/admin')->uri(array('action' => 'create')) => __('Nova Pagina'),
+					Route::get('shindig/admin/places')->uri(array('action' => 'list')) => __('Lista de Imoveis'),
 //					Route::get('shindig/admin/events')->uri(array('action' => 'add')) => __('Nova Actividade'),
-					Route::get('shindig/admin/photos')->uri(array('action' => 'add')) => __('Nova Foto'),
-					Route::get('shindig/admin/photos')->uri(array('action' => 'list')) => __('Lista de Fotos'),
+//					Route::get('shindig/admin/photos')->uri(array('action' => 'add')) => __('Nova Foto'),
+//					Route::get('shindig/admin/photos')->uri(array('action' => 'list')) => __('Lista de Fotos'),
 //					Route::get('shindig/admin')->uri(array('action' => 'add_user')) => __('Novo Utilisador'),
-					Route::get('shindig/admin')->uri(array('action' => 'list_users')) => __('Lista de Utilizadores'),
+                    Route::get('shindig/admin/services')->uri(array('action' => 'list')) => __('Lista de Serviços'),
+//                    Route::get('shindig/admin/services')->uri(array('action' => 'add')) => __('Novo Serviço'),
+                    Route::get('shindig/admin')->uri(array('action' => 'list_users')) => __('Lista de Utilizadores'),
 				);
 				$this->template->menu_b = array(
 					Route::get('shindig/admin')->uri(array('action' => 'logout')) => __('Logout'),

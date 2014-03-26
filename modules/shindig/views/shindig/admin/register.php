@@ -12,12 +12,6 @@
 <li><label><span>Password</span> <?php echo form::password('password') ?></label></li>
 <li><label><span>Descrição</span> <?php echo form::textarea('description', $user->description) ?></label></li>
 <li><label><span>Foto</span> <?php echo form::file('photo') ?></label></li>
-<li><label><span>Guia ?</span>
-		<select name="is_walker">
-			<option value="1" <?=($user->is_walker==1)?'selected':''?>>Sim</option>
-			<option value="0" <?=($user->is_walker!=1)?'selected':''?>>Não</option>
-		</select>
-	</label></li>
 </ol>
 
 <?php echo form::button(NULL, 'Save', array('type' => 'submit')) ?>

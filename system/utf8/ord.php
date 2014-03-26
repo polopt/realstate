@@ -4,7 +4,7 @@
  *
  * @package    Kohana
  * @author     Kohana Team
- * @copyright  (c) 2007-2011 Kohana Team
+ * @copyright  (c) 2007-2010 Kohana Team
  * @copyright  (c) 2005 Harry Fuecks
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
  */
@@ -17,7 +17,8 @@ function _ord($chr)
 
 	if ( ! isset($chr[1]))
 	{
-		throw new UTF8_Exception('Short sequence - at least 2 bytes expected, only 1 seen');
+		trigger_error('Short sequence - at least 2 bytes expected, only 1 seen', E_USER_WARNING);
+		return FALSE;
 	}
 
 	$ord1 = ord($chr[1]);
@@ -27,7 +28,8 @@ function _ord($chr)
 
 	if ( ! isset($chr[2]))
 	{
-		throw new UTF8_Exception('Short sequence - at least 3 bytes expected, only 2 seen');
+		trigger_error('Short sequence - at least 3 bytes expected, only 2 seen', E_USER_WARNING);
+		return FALSE;
 	}
 
 	$ord2 = ord($chr[2]);
@@ -37,7 +39,8 @@ function _ord($chr)
 
 	if ( ! isset($chr[3]))
 	{
-		throw new UTF8_Exception('Short sequence - at least 4 bytes expected, only 3 seen');
+		trigger_error('Short sequence - at least 4 bytes expected, only 3 seen', E_USER_WARNING);
+		return FALSE;
 	}
 
 	$ord3 = ord($chr[3]);
@@ -47,7 +50,8 @@ function _ord($chr)
 
 	if ( ! isset($chr[4]))
 	{
-		throw new UTF8_Exception('Short sequence - at least 5 bytes expected, only 4 seen');
+		trigger_error('Short sequence - at least 5 bytes expected, only 4 seen', E_USER_WARNING);
+		return FALSE;
 	}
 
 	$ord4 = ord($chr[4]);
@@ -57,7 +61,8 @@ function _ord($chr)
 
 	if ( ! isset($chr[5]))
 	{
-		throw new UTF8_Exception('Short sequence - at least 6 bytes expected, only 5 seen');
+		trigger_error('Short sequence - at least 6 bytes expected, only 5 seen', E_USER_WARNING);
+		return FALSE;
 	}
 
 	if ($ord0 >= 252 AND $ord0 <= 253)
@@ -65,8 +70,7 @@ function _ord($chr)
 
 	if ($ord0 >= 254 AND $ord0 <= 255)
 	{
-		throw new UTF8_Exception("Invalid UTF-8 with surrogate ordinal ':ordinal'", array(
-			':ordinal' => $ord0,
-		));
+		trigger_error('Invalid UTF-8 with surrogate ordinal '.$ord0, E_USER_WARNING);
+		return FALSE;
 	}
 }

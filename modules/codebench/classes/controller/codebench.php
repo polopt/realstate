@@ -13,15 +13,11 @@ class Controller_Codebench extends Kohana_Controller_Template {
 	// The codebench view
 	public $template = 'codebench';
 
-	public function action_index()
+	public function action_index($class)
 	{
-		$class = $this->request->param('class');
-
 		// Convert submitted class name to URI segment
 		if (isset($_POST['class']))
-		{
 			$this->request->redirect('codebench/'.trim($_POST['class']));
-		}
 
 		// Pass the class name on to the view
 		$this->template->class = (string) $class;

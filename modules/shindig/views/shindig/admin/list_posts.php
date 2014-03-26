@@ -9,7 +9,7 @@
  <td><?php echo $post->verbose('created_on') ?></td>
  <td><?php echo $post->verbose('type') ?></td>
  <td><?php echo $post->verbose('status') ?></td>
- <td><?php echo html::anchor(Route::get('shindig/admin')->uri(array('action'=>'list','id'=>$post->id)),"delete") ?></a>
+ <td><?php echo html::anchor(Route::get('shindig/admin')->uri(array('action'=>'list','id'=>$post->id)),"delete") ?></a></td>
 </tr>
 
 <?php endforeach; ?>

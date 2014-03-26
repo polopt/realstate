@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The directory in which your application specific resources are located.
  * The application directory must contain the bootstrap.php file.
@@ -55,17 +56,23 @@ error_reporting(E_ALL | E_STRICT);
 // Set the full path to the docroot
 define('DOCROOT', realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR);
 
-// Make the application relative to the docroot, for symlink'd index.php
+// Make the application relative to the docroot
 if ( ! is_dir($application) AND is_dir(DOCROOT.$application))
+{
 	$application = DOCROOT.$application;
+}
 
-// Make the modules relative to the docroot, for symlink'd index.php
+// Make the modules relative to the docroot
 if ( ! is_dir($modules) AND is_dir(DOCROOT.$modules))
+{
 	$modules = DOCROOT.$modules;
+}
 
-// Make the system relative to the docroot, for symlink'd index.php
+// Make the system relative to the docroot
 if ( ! is_dir($system) AND is_dir(DOCROOT.$system))
+{
 	$system = DOCROOT.$system;
+}
 
 // Define the absolute paths for configured directories
 define('APPPATH', realpath($application).DIRECTORY_SEPARATOR);
@@ -81,30 +88,22 @@ if (file_exists('install'.EXT))
 	return include 'install'.EXT;
 }
 
-/**
- * Define the start time of the application, used for profiling.
- */
-if ( ! defined('KOHANA_START_TIME'))
-{
-	define('KOHANA_START_TIME', microtime(TRUE));
-}
+// Load the base, low-level functions
+require SYSPATH.'base'.EXT;
 
-/**
- * Define the memory usage at the start of the application, used for profiling.
- */
-if ( ! defined('KOHANA_START_MEMORY'))
+// Load the core Kohana class
+require SYSPATH.'classes/kohana/core'.EXT;
+
+if (is_file(APPPATH.'classes/kohana'.EXT))
 {
-	define('KOHANA_START_MEMORY', memory_get_usage());
+	// Application extends the core
+	require APPPATH.'classes/kohana'.EXT;
+}
+else
+{
+	// Load empty core extension
+	require SYSPATH.'classes/kohana'.EXT;
 }
 
 // Bootstrap the application
 require APPPATH.'bootstrap'.EXT;
-
-/**
- * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
- * If no source is specified, the URI will be automatically detected.
- */
-echo Request::factory()
-	->execute()
-	->send_headers()
-	->body();

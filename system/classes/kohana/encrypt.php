@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php defined('SYSPATH') or die('No direct access allowed.');
 /**
  * The Encrypt library provides two-way encryption of text and binary strings
  * using the [Mcrypt](http://php.net/mcrypt) extension, which consists of three
@@ -20,7 +20,7 @@
  * @package    Kohana
  * @category   Security
  * @author     Kohana Team
- * @copyright  (c) 2007-2011 Kohana Team
+ * @copyright  (c) 2007-2010 Kohana Team
  * @license    http://kohanaframework.org/license
  */
 class Kohana_Encrypt {
@@ -60,7 +60,7 @@ class Kohana_Encrypt {
 		if ( ! isset(Encrypt::$instances[$name]))
 		{
 			// Load the configuration data
-			$config = Kohana::$config->load('encrypt')->$name;
+			$config = Kohana::config('encrypt')->$name;
 
 			if ( ! isset($config['key']))
 			{

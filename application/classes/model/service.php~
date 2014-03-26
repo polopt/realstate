@@ -1,0 +1,18 @@
+<?php
+
+class Model_Company extends ORM {
+
+    protected $_has_many = array(
+        'houses' => array('model' => 'house')
+    );
+    
+    protected $_rules = array(
+            'name' => array(
+            'not_empty' => NULL,
+            'min_length' => array(2),
+            'max_length' => array(50),
+        ),
+    );
+}
+
+?>

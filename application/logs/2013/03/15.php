@@ -1,0 +1,17 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
+2013-03-15 09:55:44 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 10:15:31 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 13:01:56 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 13:02:33 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 13:02:33 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 13:02:34 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 13:02:35 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 13:02:35 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 14:23:34 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 14:23:35 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 14:23:36 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 14:23:37 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 14:23:39 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 22:14:30 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2013-03-15 22:14:31 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: caminhadas/favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]

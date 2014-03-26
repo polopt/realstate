@@ -103,7 +103,7 @@ abstract class Kohana_Cache {
 	 *
 	 * @param   string   the name of the cache group to use [Optional]
 	 * @return  Kohana_Cache
-	 * @throws  Cache_Exception
+	 * @throws  Kohana_Cache_Exception
 	 */
 	public static function instance($group = NULL)
 	{
@@ -120,14 +120,11 @@ abstract class Kohana_Cache {
 			return Cache::$instances[$group];
 		}
 
-		$config = Kohana::$config->load('cache');
+		$config = Kohana::config('cache');
 
 		if ( ! $config->offsetExists($group))
 		{
-			throw new Cache_Exception(
-				'Failed to load Kohana Cache group: :group',
-				array(':group' => $group)
-			);
+			throw new Kohana_Cache_Exception('Failed to load Kohana Cache group: :group', array(':group' => $group));
 		}
 
 		$config = $config->get($group);
@@ -141,9 +138,9 @@ abstract class Kohana_Cache {
 	}
 
 	/**
-	 * @var  Config
+	 * @var  Kohana_Config
 	 */
-	protected $_config = array();
+	protected $_config;
 
 	/**
 	 * Ensures singleton pattern is observed, loads the default expiry
@@ -152,59 +149,18 @@ abstract class Kohana_Cache {
 	 */
 	protected function __construct(array $config)
 	{
-		$this->config($config);
-	}
-
-	/**
-	 * Getter and setter for the configuration. If no argument provided, the 
-	 * current configuration is returned. Otherwise the configuration is set
-	 * to this class.
-	 * 
-	 *     // Overwrite all configuration
-	 *     $cache->config(array('driver' => 'memcache', '...'));
-	 * 
-	 *     // Set a new configuration setting
-	 *     $cache->config('servers', array(
-	 *          'foo' => 'bar',
-	 *          '...'
-	 *          ));
-	 * 
-	 *     // Get a configuration setting
-	 *     $servers = $cache->config('servers);
-	 *
-	 * @param   mixed    key to set to array, either array or config path
-	 * @param   mixed    value to associate with key
-	 * @return  mixed
-	 */
-	public function config($key = NULL, $value = NULL)
-	{
-		if ($key === NULL)
-			return $this->_config;
-
-		if (is_array($key))
-		{
-			$this->_config = $key;
-		}
-		else
-		{
-			if ($value === NULL)
-				return Arr::get($this->_config, $key);
-
-			$this->_config[$key] = $value;
-		}
-
-		return $this;
+		$this->_config = $config;
 	}
 
 	/**
 	 * Overload the __clone() method to prevent cloning
 	 *
 	 * @return  void
-	 * @throws  Cache_Exception
+	 * @throws  Kohana_Cache_Exception
 	 */
-	final public function __clone()
+	public function __clone()
 	{
-		throw new Cache_Exception('Cloning of Kohana_Cache objects is forbidden');
+		throw new Kohana_Cache_Exception('Cloning of Kohana_Cache objects is forbidden');
 	}
 
 	/**
@@ -222,7 +178,7 @@ abstract class Kohana_Cache {
 	 * @param   string   id of cache to entry
 	 * @param   string   default value to return if cache miss
 	 * @return  mixed
-	 * @throws  Cache_Exception
+	 * @throws  Kohana_Cache_Exception
 	 */
 	abstract public function get($id, $default = NULL);
 

@@ -2,13 +2,13 @@
 /**
  * TestCase for testing a database
  *
- * @package    Kohana/UnitTest
+ * @package    Kohana/Unittest
  * @author     Kohana Team
  * @author     BRMatt <matthew@sigswitch.com>
  * @copyright  (c) 2008-2009 Kohana Team
  * @license    http://kohanaphp.com/license
  */
-abstract class Kohana_Unittest_Database_TestCase extends PHPUnit_Extensions_Database_TestCase {
+Abstract Class Kohana_Unittest_Database_TestCase extends PHPUnit_Extensions_Database_TestCase {
 
 	/**
 	 * Whether we should enable work arounds to make the tests compatible with phpunit 3.4
@@ -20,7 +20,7 @@ abstract class Kohana_Unittest_Database_TestCase extends PHPUnit_Extensions_Data
 	 * Make sure PHPUnit backs up globals
 	 * @var boolean
 	 */
-	protected $backupGlobals = FALSE;
+	protected $backupGlobals = TRUE;
 
 	/**
 	 * A set of unittest helpers that are shared between normal / database
@@ -36,12 +36,6 @@ abstract class Kohana_Unittest_Database_TestCase extends PHPUnit_Extensions_Data
 	protected $environmentDefault = array();
 
 	/**
-	 * The kohana database connection that PHPUnit should use for this test
-	 * @var string
-	 */
-	protected $_database_connection = 'default';
-
-	/**
 	 * Creates a predefined environment using the default environment
 	 *
 	 * Extending classes that have their own setUp() should call
@@ -51,11 +45,6 @@ abstract class Kohana_Unittest_Database_TestCase extends PHPUnit_Extensions_Data
 	{
 		if(self::$_assert_type_compatability === NULL)
 		{
-			if( ! class_exists('PHPUnit_Runner_Version'))
-			{
-				require_once 'PHPUnit/Runner/Version.php';
-			}
-
 			self::$_assert_type_compatability = version_compare(PHPUnit_Runner_Version::id(), '3.5.0', '<=');
 		}
 		
@@ -87,7 +76,8 @@ abstract class Kohana_Unittest_Database_TestCase extends PHPUnit_Extensions_Data
 	public function getConnection()
 	{
 		// Get the unittesting db connection
-		$config = Kohana::$config->load('database.'.$this->_database_connection);
+		$config = Kohana::config('database')
+			->{Kohana::config('unittest')->db_connection};
 
 		if($config['type'] !== 'pdo')
 		{
@@ -112,7 +102,7 @@ abstract class Kohana_Unittest_Database_TestCase extends PHPUnit_Extensions_Data
      */
     public function getKohanaConnection()
     {
-        return Database::instance(Kohana::$config->load('unittest')->db_connection);
+        return Database::instance(Kohana::config('unittest')->db_connection);
     }
 
 	/**

@@ -7,10 +7,7 @@
 
 	Any options you specify when calling phpunit will override the ones in here
 -->
-<php>
-	<includePath>./cache</includePath>
-</php>
-<phpunit colors="true" bootstrap="/path/to/your/unittest/bootstrap.php">
+<phpunit colors="true" bootstrap="../../../articles/public/index.php">
 	<testsuites>
 		<testsuite name="Kohana Cache Tests">
 			<directory suffix=".php">cache/</directory>
