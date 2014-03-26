@@ -43,13 +43,19 @@ class Controller_Shindig_Services extends Controller_Shindig_Admin
 		}
 	}
 
-	public function action_list() {
+	public function action_list($id=NULL, $action=NULL) {
 		$ipp = 15;
         $n_services = ORM::factory('service')->count_all();
 		$this->template->content = View::factory('shindig/admin/services/list')
             ->bind('form_title', $pagination)
 			->bind('services', $services);
-				
+
+
+        if(!is_null($id)) {
+            $service = ORM::factory('service')->find($id);
+            $service->delete();
+        }
+
 		$services = ORM::factory('service')->find_all();
 
 		$this->template->content->pagination = new Pagination(array(
@@ -61,5 +67,13 @@ class Controller_Shindig_Services extends Controller_Shindig_Admin
                     'first_page_in_url' => FALSE,
                 ));
 	}
+
+    public function action_delete($id=NULL) {
+        if(!is_null($id)) {
+            $service = ORM::factory('service')->find($id);
+            $service->delete();
+        }
+        $this->request->redirect("/shindig/admin/services/list");
+    }
 	
 }

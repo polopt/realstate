@@ -158,42 +158,6 @@ class Controller_Shindig_Admin extends Controller_Template
                 ));
 	}
 	
-	
-	
-//	$userObj->values($_POST['user']);
-//            if (!$userObj->check()) {
-//                $view->errors = $userObj->errors();
-//                $view->post = $_POST['user'];
-//            } else {
-//                $userObj->save();
-//                $roleObj = ORM::factory('role')->where('name', '=', 'login')->find();
-//                $userObj->add('roles', $roleObj);
-//
-//                //subscrever a newsletter
-//               
-//                //fazer login
-//                Auth::instance()->login($_POST['user']['username'], $_POST['user']['password']);
-//                //enviar email com dados
-//                $welcome_view = new View('mail/welcome');
-//                $welcome_view->userObj = $userObj;
-//                $welcome_view->password = $_POST['user']['password'];
-//                $welcome_view->urlBase = url::base(false, true);
-//
-//                $main_template = new View('mail/main_template');
-//                $main_template->urlBase = url::base(false, true);
-//                $main_template->mail_content = $welcome_view;
-//                
-//                try {
-//                    Email::send('olivictor@gmail.com', array('info@mesfantasmes.net', 'Mesfantasmes'), __("Nouveau User"), $main_template->render(), true);
-//                } catch(Exception $e) {
-//                    Kohana_Log::instance()->add('error', $e);
-//                }
-//                
-//
-//                $this->request->redirect('/user/dashboard');
-//            }
-
-
 	public function action_login()
 	{
 
@@ -347,7 +311,7 @@ class Controller_Shindig_Admin extends Controller_Template
 					Route::get('shindig/admin')->uri(array('action' => 'config')) => __('Configurações gerais'),
 					Route::get('shindig/admin')->uri() => __('Lista de Paginas'),
 					Route::get('shindig/admin')->uri(array('action' => 'create')) => __('Nova Pagina'),
-					Route::get('shindig/admin/places')->uri(array('action' => 'list')) => __('Lista de Imoveis'),
+//					Route::get('shindig/admin/places')->uri(array('action' => 'list')) => __('Lista de Imoveis'),
 //					Route::get('shindig/admin/events')->uri(array('action' => 'add')) => __('Nova Actividade'),
 //					Route::get('shindig/admin/photos')->uri(array('action' => 'add')) => __('Nova Foto'),
 //					Route::get('shindig/admin/photos')->uri(array('action' => 'list')) => __('Lista de Fotos'),
