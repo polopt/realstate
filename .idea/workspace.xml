@@ -26,7 +26,7 @@
       <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="49" selection-start="4738" selection-end="4738" vertical-scroll-proportion="0.63764703" vertical-offset="2143" max-vertical-offset="5475">
+            <state line="179" column="50" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.63764703" vertical-offset="2143" max-vertical-offset="5475">
               <folding />
             </state>
           </provider>
@@ -736,7 +736,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="49" selection-start="4738" selection-end="4738" vertical-scroll-proportion="0.63764703" vertical-offset="2143" max-vertical-offset="5475">
+        <state line="179" column="50" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.63764703" vertical-offset="2143" max-vertical-offset="5475">
           <folding />
         </state>
       </provider>
