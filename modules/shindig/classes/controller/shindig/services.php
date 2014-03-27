@@ -9,7 +9,7 @@ class Controller_Shindig_Services extends Controller_Shindig_Admin
 	}
 
 	
-	public function action_add()
+	public function action_add($id=null)
 	{
 		$this->template->content = View::factory('shindig/admin/services/add')
 				->bind('service', $service)
@@ -17,14 +17,20 @@ class Controller_Shindig_Services extends Controller_Shindig_Admin
                 ->bind('editor', $editor)
                 ->bind('editor_topics', $editor_topics)
 				->bind('msg_error', $msg_error);
-        $content = null;
-        $editor = $this->tiny('description', $content);
-        $editor_topics = $this->tiny('topics', $content);
 		$msg = "";
 		$msg_error = "";
+        $description = null;
+        $topics = null;
+        $service = ORM::factory('service');
+        if(!is_null($id)) {
+            $service->find($id);
+            $description = $service->description;
+            $topics = $service->topics;
+        }
+        $editor = $this->tiny('description', $description);
+        $editor_topics = $this->tiny('topics', $topics);
 		if($_POST) {
 //			$service_id = $_POST['service_id'];
-			$service = ORM::factory('service');
             $service->values($_POST);
             if(!$service->check()) {
                 var_dump("Error");die;

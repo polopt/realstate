@@ -15,7 +15,7 @@
     <div class="span-17">
         <dl>
             <dt><?php echo __('Nome do Serviço:')?></dt>
-            <dd><?php echo form::input('name',"")?></dd>
+            <dd><?php echo form::input('name',$service->name)?></dd>
         </dl>
         <dl>
             <dt><?=__('Descrição')?></dt>
@@ -23,7 +23,7 @@
         </dl>
         <dl>
             <dt><?php echo __('Descrição curta:')?></dt>
-            <dd><?php echo form::input('short_content',"")?></dd>
+            <dd><?php echo form::input('short_content', $service->short_content)?></dd>
         </dl>
         <dl>
             <dt><?=__('Categorias')?></dt>
