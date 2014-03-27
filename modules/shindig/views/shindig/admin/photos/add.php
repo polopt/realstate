@@ -82,10 +82,10 @@ form fieldset {
 		<input type="file" id="file3" name="file3" /><br />
 		<textarea name="description3">Insira descrição aqui ...</textarea><br />
 		<input type="hidden" name="MAX_FILE_SIZE" value="67108864" />
-		<label for="campaign_id">Walk : 
+		<label for="campaign_id">Places :
 			<select name="campaing_id">
-				<option value="0">No Walk</option>
-				<? foreach($campaigns as $campaign) : ?>
+				<option value="0">Place</option>
+				<? foreach($houses as $campaign) : ?>
 					<option value="<?=$campaign->id?>"><?=$campaign->name?></option>
 				<? endforeach;?>
 			</select>

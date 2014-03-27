@@ -50,17 +50,14 @@ class Controller_Shindig_Services extends Controller_Shindig_Admin
             ->bind('form_title', $pagination)
 			->bind('services', $services);
 
-
         if(!is_null($id)) {
             $service = ORM::factory('service')->find($id);
             $service->delete();
         }
-
 		$services = ORM::factory('service')->find_all();
-
 		$this->template->content->pagination = new Pagination(array(
                     'current_page' => array('source' => 'query_string', 'key' => 'page'),
-	            'total_items' => $n_services,
+	                'total_items' => $n_services,
                     'items_per_page' => $ipp,
                     'view' => 'pagination/floating',
                     'auto_hide' => TRUE,

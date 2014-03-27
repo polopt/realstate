@@ -15,7 +15,7 @@ class Controller_Website extends Controller_Template {
 // 'moderatorpanel' => array('login', 'moderator') will only allow users with the roles login and moderator to access action_moderatorpanel
     public $secure_actions = FALSE;
     public $lang_id;
-    public $full_width = FALSE;
+    public $full_width = true;
 
     public function before()
     {

@@ -12,12 +12,12 @@ class Controller_Shindig_Photos extends Controller_Shindig_Admin
 	public function action_add()
 	{
 		$this->template->content = View::factory('shindig/admin/photos/add')
-				->bind('campaigns', $campaigns)
+				->bind('houses', $houses)
 				->bind('msg', $msg)
 				->bind('msg_error', $msg_error);
 		$msg = "";
 		$msg_error = "";
-		$campaigns = ORM::factory('event')->find_all();
+		$houses = ORM::factory('house')->find_all();
 		if($_POST) {
 			$campaign_id = $_POST['campaing_id'];
 			if ($_FILES) {

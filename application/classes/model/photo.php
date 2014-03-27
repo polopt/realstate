@@ -12,9 +12,9 @@ defined('SYSPATH') or die('No direct access allowed.');
  */
 class Model_Photo extends ORM
 {
-	var $basedir = 'datastore/events/';
+	var $basedir = 'datastore/places/';
 	var $thumbdir = 'datastore/thumbs/';
-	const PATHF = 'datastore/events/';
+	const PATHF = 'datastore/places/';
 	const DEPTH = 3;
 	const FILES_PER_DIR = 1000;
 	const MAX_SIDE_SIZE = 750;
@@ -49,21 +49,21 @@ class Model_Photo extends ORM
 			list($name, $ext) = explode('.'.$ext, $filename);
 			$name = uniqid($name);
 			
-			if ($file_width >= self::WIDTH && $file_height >= self::HEIGTH) 
-			{
-                $imagepath      = DOCROOT.$this->basedir.trim($name).'.jpg';
-                $image->resize(self::WIDTH, self::HEIGTH, Image::NONE);
-            }
-            else
-            {
+//			if ($file_width >= self::WIDTH && $file_height >= self::HEIGTH)
+//			{
+//                $imagepath      = DOCROOT.$this->basedir.trim($name).'.jpg';
+//                $image->resize(self::WIDTH, self::HEIGTH, Image::NONE);
+//            }
+//            else
+//            {
 				$imagepath      = DOCROOT.$this->basedir.trim($name).'.jpg';
                 $image->resize(self::WIDTH, self::HEIGTH, Image::NONE);
-            }
+//            }
 			
 			$image_copy = $image;
 			$this->path = $name.'.jpg';
-			$this->event_id = $campaign_id;
-			$this->is_background = $is_background;
+			$this->house_id = $campaign_id;
+//			$this->is_background = $is_background;
 			$this->save();
 			$imagepath      = DOCROOT.$this->basedir.trim($this->id).'.jpg';
 			$image->save($imagepath, 100);
