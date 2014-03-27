@@ -25,17 +25,19 @@ class Controller_Website extends Controller_Template {
 
     public function after()
     {
-        if($this->show_partners) {
-            $this->template->body->show_partners = $this->show_partners;
-            $this->template->body->partners = new View('widgets/partners');
-        } else {
-            $this->template->body->show_partners = false;
-            $this->template->body->partners = null;
-        }
-        if($this->full_width) {
-            $this->template->full_width_css = 'no-full';
-        } else {
-            $this->template->full_width_css = 'center_page';
+        if($this->auto_render) {
+            if($this->show_partners) {
+                $this->template->body->show_partners = $this->show_partners;
+                $this->template->body->partners = new View('widgets/partners');
+            } else {
+                $this->template->body->show_partners = false;
+                $this->template->body->partners = null;
+            }
+            if($this->full_width) {
+                $this->template->full_width_css = 'no-full';
+            } else {
+                $this->template->full_width_css = 'center_page';
+            }
         }
 //        var_dump("after");die;
 	    parent::after();

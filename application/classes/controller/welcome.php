@@ -52,4 +52,21 @@ class Controller_Welcome extends Controller_Frontend {
         }
     }
 
+
+    public function action_search() {
+
+        $search = $_POST['search'];
+        $cities = ORM::factory('zone')->where('name', 'like', "%$search%")->find_all();
+
+        if(!empty($cities)) {
+            foreach($cities as $city) {
+                $cities_array[] = $city->as_array();
+            }
+            echo json_encode(array('result' => $cities_array));
+        } else {
+            echo json_encode($cities);
+        }
+        $this->auto_render = false;
+    }
+
 } // End Welcome

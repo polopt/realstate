@@ -57,6 +57,7 @@ class Controller_Shindig_Places extends Controller_Shindig_Admin
 			->bind('house', $house)
 			->bind('categories', $categories)
 			->bind('editor', $editor)
+            ->bind('zones', $zones)
             ->bind('services', $services);
 		$msg = "";
 		$house = ORM::factory('house');
@@ -64,6 +65,7 @@ class Controller_Shindig_Places extends Controller_Shindig_Admin
 		$image = null;
         $services =  ORM::factory('service')->find_all();
 		$categories = ORM::factory('category')->find_all();
+        $zones = ORM::factory('zone')->find_all();
 
 		if(!is_null($id)) {
 			$house->find($id);

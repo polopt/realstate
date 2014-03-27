@@ -23,6 +23,7 @@
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <link rel="stylesheet" href="/media/css/style.css" type="text/css" media="all" />
         <link rel='stylesheet' id=''  href='/media/css/main.css' type='text/css' media='all' />
+        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
           {lang: 'pt-PT'}
         </script>
