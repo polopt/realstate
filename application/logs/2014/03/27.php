@@ -348,3 +348,6 @@
 2014-03-27 23:40:57 --- ERROR: ErrorException [ 8 ]: Undefined variable: cities_array ~ APPPATH/classes/controller/welcome.php [ 65 ]
 2014-03-27 23:40:57 --- ERROR: ErrorException [ 8 ]: Undefined variable: cities_array ~ APPPATH/classes/controller/welcome.php [ 65 ]
 2014-03-27 23:42:49 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: images/ui-anim_basic_16x16.gif ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2014-03-27 23:48:19 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2014-03-27 23:48:21 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]
+2014-03-27 23:48:22 --- ERROR: Kohana_Request_Exception [ 0 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 676 ]

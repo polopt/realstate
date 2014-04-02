@@ -87,7 +87,7 @@
 <!-- /#property_list -->
 <div id="property_info">
     <div class="row-fluid property-row">
-        <img id="blog" src="/media/images/logo-naming.png" />
+        <a href="/servicos#contact_overlay"><img id="blog" src="/media/images/logo-naming.png" /></a>
     </div>
 </div>
 <?//new View("home/blog"); ?>

@@ -1,19 +1,20 @@
-<!--<header id="banner">-->
-<!--    <div id="banner_container" class="container">-->
-<!--        <h3 class="banner-title">Properties Listing</h3>-->
-<!--        <p class="banner-subtitle"></p>-->
-<!--    </div>-->
-<!--</header>-->
+
 <div class="content-wrapper clearfix">
 <div id="title-listing" class="container">
-    <div class="property-list-title">Properties Listing</div>
-<!--    <div class="property-list-by">-->
-<!--        <a class="current" href="#">All</a>-->
-<!--        <a class="" href="#">Apartments</a>-->
-<!--        <a class="" href="#">Bungalows</a>-->
-<!--        <a class="" href="#">Condominium</a>-->
-<!--        <a class="" href="#">Villas</a>-->
-<!--    </div>-->
+    <div id="text_city">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien felis, egestas ac velit ac, pellentesque euismod quam.
+        Mauris pulvinar pretium lectus. Morbi ut mauris vulputate, rhoncus sem at, vestibulum quam. Nam nec libero velit. Proin blandit tempor pharetra.
+        Nulla ultrices mi risus, a ultrices metus sollicitudin vitae. Donec neque nunc, varius at nulla porta, ultrices cursus dolor.
+        Nam accumsan, eros eget pharetra volutpat, purus tortor tincidunt erat, sed commodo nisl tortor eu dolor. Praesent eleifend nibh sit amet felis elementum, eget dignissim ipsum facilisis.
+    </div>
+    <div id="text_place">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien felis, egestas ac velit ac, pellentesque euismod quam.
+        Mauris pulvinar pretium lectus. Morbi ut mauris vulputate, rhoncus sem at, vestibulum quam. Nam nec libero velit. Proin blandit tempor pharetra.
+        Nulla ultrices mi risus, a ultrices metus sollicitudin vitae. Donec neque nunc, varius at nulla porta, ultrices cursus dolor.
+        Nam accumsan, eros eget pharetra volutpat, purus tortor tincidunt erat, sed commodo nisl tortor eu dolor. Praesent eleifend nibh sit amet felis elementum, eget dignissim ipsum facilisis.
+    </div>
+
+<!--    <div class="property-list-title">--><?//=__('Opurtonidades') ?><!--</div>-->
 </div><!-- /#title-listing -->
 <div class="container"><!-- container via hooks -->
 <div id="main" class="row-fluid">
@@ -21,10 +22,6 @@
 <div id="archive-wrapper">
 <div class="property-sort">
     <div class="sort-title">
-<!--        <span class="sort-by">Sort By: </span>-->
-<!--        <a href="#" class="current">All</a>-->
-<!--        <a class="" href="#">For Rent</a>-->
-<!--        <a class="" href="#">For Sale</a>-->
     </div>
     <div class="grid-view hidden-phone">
         <a href="property-listings-list.html"><img src="/media/images/view-list.png" /></a>
@@ -32,230 +29,94 @@
     </div>
 </div>
 <div class="row-fluid">
-<div class="row-fluid property-listing status-35 clearfix">
-    <div class="listing-image span5">
-        <div class="property-image-container">
-            <a href="property-single.html" title="Florida 5, Pinecrest, FL">
-                <img width="540" height="360" src="uploads/dummy-540x360.png" class="attachment-real-property-loop wp-post-image" alt="Florida 5, Pinecrest, FL" title="Florida 5, Pinecrest, FL" />
-            </a>
-        </div><!-- /.property-images-container -->
-        <div class="listing-meta">
-            <ul>
-                <li class="meta-size"><i class="ico-size"></i>240M</li>
-                <li class="meta-bedroom"><i class="ico-bedroom"></i>3</li>
-                <li class="meta-bathroom"><i class="ico-bathroom"></i>5</li>
-                <li class="meta-garage"><i class="ico-garage"></i>1</li>
-            </ul>
+    <? foreach($houses as $house) : ?>
+    <div class="row-fluid property-listing status-35 clearfix">
+        <div class="listing-image span5">
+            <div class="property-image-container">
+                <a href="property-single.html" title="Florida 5, Pinecrest, FL">
+                    <img width="540" height="360" src="uploads/dummy-540x360.png" class="attachment-real-property-loop wp-post-image" alt="Florida 5, Pinecrest, FL" title="Florida 5, Pinecrest, FL" />
+                </a>
+            </div><!-- /.property-images-container -->
+
         </div>
-    </div>
-    <div class="listing-info span7">
-        <div class="listing-title">
-            <a href="/property/detail" title="Florida 5, Pinecrest, FL">Florida 5, Pinecrest, FL</a>
-            <i class="icon-heart"></i>
-        </div>
-        <div class="listing-content">
-            <div class="listing-property-price">
-                <sup class="price-curr">$</sup>16,000&nbsp;
-                <span class="price-postfix"></span>
+        <div class="listing-info span7">
+            <div class="listing-title">
+                <a href="/property/detail/<?=$house->id?>" title="<?=$house->name?>"><?=$house->name?></a>
+                <i class="icon-heart"></i>
             </div>
-            <div class="listing-excerpt">
-                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas...</p>
+            <div class="listing-content">
+<!--                <div class="listing-property-price">-->
+<!--                    <sup class="price-curr">€</sup>--><?//=$house->price?><!--&nbsp;-->
+<!--                    <span class="price-postfix"></span>-->
+<!--                </div>-->
+<!--                <div class="listing-excerpt">-->
+<!--                    <p>--><?//=$house->description?><!--</p>-->
+<!--                </div>-->
+                <ul>
+                    <li>Topologia:</li>
+                    <li>Area Privativa: 50</li>
+                    <li>rea Dependente: 50</li>
+                    <li>Area Total: 50</li>
+                </ul>
+                <ul>
+                    <li>Topologia: Topologia valor</li>
+                    <li>Area Privativa: 50</li>
+                    <li>rea Dependente: 50</li>
+                    <li>Area Total: 50</li>
+                </ul>
+                <ul>
+                    <li>Topologia: Topologia valor</li>
+                    <li>Area Privativa: 50</li>
+                    <li>rea Dependente: 50</li>
+                    <li>Area Total: 50</li>
+                </ul>
+                <ul>
+                    <li>Topologia: Topologia valor</li>
+                    <li>Area Privativa: 50</li>
+                    <li>rea Dependente: 50</li>
+                    <li>Area Total: 50</li>
+                </ul>
+
+<!--                <table border="1px">-->
+<!--                    <tr>-->
+<!--                        <td>Topologia : Topologia Value</td>-->
+<!--<!--                        <td>Area Privativa: 50</td>-->
+<!--<!--                        <td>Area Dependente: 50</td>-->
+                <!--<!--                        <td>Area Total: 50</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Area Privativa: 50</td>-->
+<!--                        <td>Area Dependente: 50</td>-->
+<!--<!--                        <td>Area Total: 50</td>-->
+<!--<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Area Dependente: 50</td>-->
+<!--<!--                        <td>Area Total: 50</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Area Total: 50</td>-->
+<!--                    </tr>-->
+<!--                </table>-->
             </div>
-        </div>
-        <div class="listing-address">
-            <i class="icon-map-marker icon-large"></i>
-            Pinecrest, FL, USA
-            <a href="#" role="button" target="_blank">View Map</a>
-        </div>
-    </div>
-    <div class="property-status status-35-text">For Sale</div>
-</div><!-- /.property-listing -->
-<div class="row-fluid property-listing status-28 clearfix">
-    <div class="listing-image span5">
-        <div class="property-image-container">
-            <a href="property-single.html" title="3015 Grand Avenue, CocoWalk">
-                <img width="540" height="360" src="uploads/dummy-540x360.png" class="attachment-real-property-loop wp-post-image" alt="3015 Grand Avenue, CocoWalk" title="3015 Grand Avenue, CocoWalk" />
-            </a>
-        </div><!-- /.property-images-container -->
-        <div class="listing-meta">
-            <ul>
-                <li class="meta-size"><i class="ico-size"></i>250 M</li>
-                <li class="meta-bedroom"><i class="ico-bedroom"></i>4</li>
-                <li class="meta-bathroom"><i class="ico-bathroom"></i>4</li>
-                <li class="meta-garage"><i class="ico-garage"></i>1</li>
-            </ul>
-        </div>
-    </div>
-    <div class="listing-info span7">
-        <div class="listing-title">
-            <a href="property-single.html" title="3015 Grand Avenue, CocoWalk">
-                3015 Grand Avenue, CocoWalk</a>
-            <i class="icon-heart"></i>
-        </div>
-        <div class="listing-content">
-            <div class="listing-property-price">
-                <sup class="price-curr">$</sup>16,000&nbsp;<span class="price-postfix">per year</span>
+            <div class="listing-address">
+                <i class="icon-map-marker icon-large"></i>
+                <?="Serviços"?>
+<!--                <a href="#" role="button" target="_blank">View Map</a>-->
             </div>
-            <div class="listing-excerpt">
-                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio ...</p>
+
+            <div class="listing-meta">
+                <ul>
+                    <li class="meta-size"><i class="ico-size"></i>240M</li>
+                    <li class="meta-bedroom"><i class="ico-bedroom"></i>3</li>
+                    <li class="meta-bathroom"><i class="ico-bathroom"></i>5</li>
+                    <li class="meta-garage"><i class="ico-garage"></i>1</li>
+                </ul>
             </div>
+
         </div>
-        <div class="listing-address">
-            <i class="icon-map-marker icon-large"></i>
-            Grand Avenue, FL 33133, USA
-            <a href="#" role="button" target="_blank">View Map</a>
-        </div>
-    </div>
-    <div class="property-status status-28-text">For Rent</div>
-</div><!-- /.property-listing -->
-<div class="row-fluid property-listing status-35 clearfix">
-    <div class="listing-image span5">
-        <div class="property-image-container">
-            <a href="property-single.html" title="1200 Anastasia Avenue, Coral Gables">
-                <img width="540" height="360" src="uploads/dummy-540x360.png" class="attachment-real-property-loop wp-post-image" alt="1200 Anastasia Avenue, Coral Gables" title="1200 Anastasia Avenue, Coral Gables" />
-            </a>
-        </div><!-- /.property-images-container -->
-        <div class="listing-meta">
-            <ul>
-                <li class="meta-size"><i class="ico-size"></i>200M</li>
-                <li class="meta-bedroom"><i class="ico-bedroom"></i>3</li>
-                <li class="meta-bathroom"><i class="ico-bathroom"></i>4</li>
-                <li class="meta-garage"><i class="ico-garage"></i>1</li>
-            </ul>
-        </div>
-    </div>
-    <div class="listing-info span7">
-        <div class="listing-title">
-            <a href="property-single.html" title="1200 Anastasia Avenue, Coral Gables">1200 Anastasia Avenue, Coral Gables</a>
-            <i class="icon-heart"></i>
-        </div>
-        <div class="listing-content">
-            <div class="listing-property-price">
-                <sup class="price-curr">$</sup>5,600&nbsp;
-                <span class="price-postfix"></span>
-            </div>
-            <div class="listing-excerpt">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure d...</p>
-            </div>
-        </div>
-        <div class="listing-address">
-            <i class="icon-map-marker icon-large"></i>
-            Anastasia Avenue, Coral Gables, FL 33134...
-            <a href="#" role="button" target="_blank">View Map</a>
-        </div>
-    </div>
-    <div class="property-status status-35-text">For Sale</div>
-</div><!-- /.property-listing -->
-<div class="row-fluid property-listing status-28 clearfix">
-    <div class="listing-image span5">
-        <div class="property-image-container">
-            <a href="property-single.html" title="60 Merrick Way, Miami">
-                <img width="540" height="360" src="uploads/dummy-540x360.png" class="attachment-real-property-loop wp-post-image" alt="60 Merrick Way, Miami" title="60 Merrick Way, Miami" />
-            </a>
-        </div><!-- /.property-images-container -->
-        <div class="listing-meta">
-            <ul>
-                <li class="meta-size"><i class="ico-size"></i>280M</li>
-                <li class="meta-bedroom"><i class="ico-bedroom"></i>4</li>
-                <li class="meta-bathroom"><i class="ico-bathroom"></i>6</li>
-                <li class="meta-garage"><i class="ico-garage"></i>1</li>
-            </ul>
-        </div>
-    </div>
-    <div class="listing-info span7">
-        <div class="listing-title">
-            <a href="property-single.html" title="60 Merrick Way, Miami">
-                60 Merrick Way, Miami			</a>
-            <i class="icon-heart"></i>
-        </div>
-        <div class="listing-content">
-            <div class="listing-property-price">
-                <sup class="price-curr">$</sup>5,000&nbsp;<span class="price-postfix">per month</span>
-            </div>
-            <div class="listing-excerpt">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure d...</p>
-            </div>
-        </div>
-        <div class="listing-address">
-            <i class="icon-map-marker icon-large"></i>
-            Merrick Way, Miami, FL 33134, USA
-            <a href="#" role="button" target="_blank">View Map</a>
-        </div>
-    </div>
-    <div class="property-status status-28-text">For Rent</div>
-</div><!-- /.property-listing -->
-<div class="row-fluid property-listing status-28 clearfix">
-    <div class="listing-image span5">
-        <div class="property-image-container">
-            <a href="property-single.html" title="15421 Southwest 39th Terrace">
-                <img width="540" height="360" src="uploads/dummy-540x360.png" class="attachment-real-property-loop wp-post-image" alt="15421 Southwest 39th Terrace" title="15421 Southwest 39th Terrace" />
-            </a>
-        </div><!-- /.property-images-container -->
-        <div class="listing-meta">
-            <ul>
-                <li class="meta-size"><i class="ico-size"></i>240 M</li>
-                <li class="meta-bedroom"><i class="ico-bedroom"></i>3</li>
-                <li class="meta-bathroom"><i class="ico-bathroom"></i>2</li>
-                <li class="meta-garage"><i class="ico-garage"></i>1</li>
-            </ul>
-        </div>
-    </div>
-    <div class="listing-info span7">
-        <div class="listing-title">
-            <a href="property-single.html" title="15421 Southwest 39th Terrace">15421 Southwest 39th Terrace</a>
-            <i class="icon-heart"></i>
-        </div>
-        <div class="listing-content">
-            <div class="listing-property-price">
-                <sup class="price-curr">$</sup>3,850&nbsp;<span class="price-postfix">per month</span>
-            </div>
-            <div class="listing-excerpt">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure d...</p>
-            </div>
-        </div>
-        <div class="listing-address">
-            <i class="icon-map-marker icon-large"></i>
-            Miami, FL, USA
-            <a href="#" role="button" target="_blank">View Map</a>
-        </div>
-    </div>
-    <div class="property-status status-28-text">For Rent</div>
-</div><!-- /.property-listing -->
-<div class="row-fluid property-listing status-35 clearfix">
-    <div class="listing-image span5">
-        <div class="property-image-container">
-            <a href="property-single.html" title="700 Front Street, Key West, FL"><img width="540" height="360" src="uploads/dummy-540x360.png" class="attachment-real-property-loop wp-post-image" alt="700 Front Street, Key West, FL" title="700 Front Street, Key West, FL" /></a>
-        </div><!-- /.property-images-container -->
-        <div class="listing-meta">
-            <ul>
-                <li class="meta-size"><i class="ico-size"></i>200M</li>
-                <li class="meta-bedroom"><i class="ico-bedroom"></i>4</li>
-                <li class="meta-bathroom"><i class="ico-bathroom"></i>5</li>
-                <li class="meta-garage"><i class="ico-garage"></i>1</li>
-            </ul>
-        </div>
-    </div>
-    <div class="listing-info span7">
-        <div class="listing-title">
-            <a href="property-single.html" title="700 Front Street, Key West, FL">700 Front Street, Key West, FL</a>
-            <i class="icon-heart"></i>
-        </div>
-        <div class="listing-content">
-            <div class="listing-property-price">
-                <sup class="price-curr">$</sup>34,400&nbsp;<span class="price-postfix"></span>
-            </div>
-            <div class="listing-excerpt">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure d...</p>
-            </div>
-        </div>
-        <div class="listing-address">
-            <i class="icon-map-marker icon-large"></i>
-            Miami, FL, USA
-            <a href="#" role="button" target="_blank">View Map</a>
-        </div>
-    </div>
-    <div class="property-status status-35-text">For Sale</div>
-</div><!-- /.property-listing -->
+        <div class="property-status status-35-text">For Sale</div>
+    </div><!-- /.property-listing -->
+<? endforeach; ?>
 </div>
 </div><!-- /#archive-wrapper -->
 <div class="property-pagination">

@@ -22,6 +22,34 @@
             <dd><?=$editor?></dd>
         </dl>
         <dl>
+            <dt><?php echo __('Estado de conservação:')?></dt>
+            <dd>
+                <select name="conservation">
+                    <option value="5" <?if($house->conservation == 5) echo "selected"?>>Bom</option>
+                    <option value="4" <?if($house->conservation == 4) echo "selected"?>>Médio</option>
+                    <option value="3" <?if($house->conservation == 3) echo "selected"?>>Mau</option>
+                    <option value="2" <?if($house->conservation == 2) echo "selected"?>>Devoluto</option>
+                    <option value="1" <?if($house->conservation == 1) echo "selected"?>>Ruina</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt><?php echo __('TIR:')?></dt>
+            <dd><?php echo form::input('tir', $house->tir)?></dd>
+        </dl>
+        <dl>
+            <dt><?php echo __('Payback:')?></dt>
+            <dd><?php echo form::input('payback', $house->payback)?></dd>
+        </dl>
+        <dl>
+            <dt><?php echo __('# empregos criados:')?></dt>
+            <dd><?php echo form::input('num_employees', $house->num_employees)?></dd>
+        </dl>
+        <dl>
+            <dt><?php echo __('Tempo de execução:')?></dt>
+            <dd><?php echo form::input('execution_time', $house->execution_time)?></dd>
+        </dl>
+        <dl>
             <dt><?=__('Tipologia')?></dt>
             <dd>
                 <select name="topology">
@@ -113,8 +141,12 @@
             </dd>
         </dl>
         <dl>
-            <dt><?=__('Preço')?></dt>
+            <dt><?=__('Valor de aquisição')?></dt>
             <dd><?php echo form::input('price', $house->price)?></dd>
+        </dl>
+        <dl>
+            <dt><?=__('Valor de reabilitação')?></dt>
+            <dd><?php echo form::input('reabilitation_value', $house->reabilitation_value)?></dd>
         </dl>
         <dl>
             <dt><?=__('Serviços')?></dt>

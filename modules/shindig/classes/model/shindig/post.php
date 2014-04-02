@@ -74,6 +74,10 @@ class Model_Shindig_Post extends Sprig {
 				'label' => __('Post Content'),
 				'empty' => TRUE,
 			)),
+            'topics' => new Sprig_Field_Tinymce(array(
+                    'label' => __('Topicos'),
+                    'empty' => TRUE,
+                )),
 			'post_excerpt' => new Sprig_Field_Tinymce(array(
 				'label' => __('Excerpt'),
 				'empty' => TRUE,
