@@ -21,6 +21,11 @@
  <?php echo $post->label('post_content') ?>
  <?php echo $post->input('post_content', array('class'=>'span-15')) ?>
 </div>
+    <div class="clear"></div>
+    <div>
+        <?php echo $post->label('categories') ?>
+        <?php echo $post->input('categories', array('class'=>'span-15')) ?>
+    </div>
 <div class="clear"></div>
 <div>
     <?php echo $post->label('topics') ?>
