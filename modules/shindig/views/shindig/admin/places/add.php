@@ -152,9 +152,18 @@
             <dt><?=__('Serviços')?></dt>
             <dd>
                 <select name="services[]" multiple>
+                    <? $find = false;?>
                     <? foreach($services as $service): ?>
-                        <option value="<?=$service->id?>"><?=$service->name?></option>
-                    <? endforeach;?>
+                        <?
+                            $find = false;
+                            foreach($services_array as $s) {
+                                if($service->id == $s->service->id) {
+                                    $find = true;
+                                }
+                            }
+                        ?>
+                        <option value="<?=$service->id?>" <?=($find)?'selected':''?> ><?=$service->name?></option>
+                    <?endforeach;?>
                 </select>
             </dd>
         </dl>

@@ -23,28 +23,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="post.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/shindig/classes/model/shindig/post.php">
+      <file leaf-file-name="add.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/admin/places/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="45" selection-start="2020" selection-end="2020" vertical-scroll-proportion="-18.958334" vertical-offset="760" max-vertical-offset="1785">
+            <state line="159" column="69" selection-start="6422" selection-end="6422" vertical-scroll-proportion="0.6742857" vertical-offset="1795" max-vertical-offset="2670">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/post.php">
+      <file leaf-file-name="services.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/services.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="176" selection-end="176" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+            <state line="27" column="39" selection-start="806" selection-end="806" vertical-scroll-proportion="-13.333333" vertical-offset="85" max-vertical-offset="1320">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_post.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/admin/edit_post.php">
+      <file leaf-file-name="places.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/places.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="43" selection-start="693" selection-end="693" vertical-scroll-proportion="0.39314285" vertical-offset="46" max-vertical-offset="1155">
+            <state line="74" column="30" selection-start="2203" selection-end="2221" vertical-scroll-proportion="-7.58" vertical-offset="731" max-vertical-offset="1800">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="house.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/classes/model/house.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="80" selection-start="154" selection-end="154" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="service.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/classes/model/service.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="74" selection-start="149" selection-end="149" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="225">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="service.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/classes/model/house/service.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="25" selection-start="19" selection-end="32" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -82,7 +109,6 @@
         <option value="$PROJECT_DIR$/modules/shindig/init.php" />
         <option value="$PROJECT_DIR$/media/css/style.css" />
         <option value="$PROJECT_DIR$/application/classes/model/house/service.php" />
-        <option value="$PROJECT_DIR$/application/classes/model/house.php" />
         <option value="$PROJECT_DIR$/application/classes/model/service.php" />
         <option value="$PROJECT_DIR$/modules/shindig/classes/controller/shindig/admin.php" />
         <option value="$PROJECT_DIR$/modules/shindig/classes/controller/shindig/photos.php" />
@@ -91,7 +117,6 @@
         <option value="$PROJECT_DIR$/modules/shindig/classes/controller/shindig/services.php" />
         <option value="$PROJECT_DIR$/modules/shindig/views/shindig/admin/services/add.php" />
         <option value="$PROJECT_DIR$/application/classes/model/zones.php" />
-        <option value="$PROJECT_DIR$/modules/shindig/classes/controller/shindig/places.php" />
         <option value="$PROJECT_DIR$/application/classes/model/zone.php" />
         <option value="$PROJECT_DIR$/modules/shindig/views/shindig/admin/places/list.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/website.php" />
@@ -106,11 +131,13 @@
         <option value="$PROJECT_DIR$/application/views/list/show.php" />
         <option value="$USER_HOME$/ANDYOU/andyoulanding/css/main.css" />
         <option value="$USER_HOME$/ANDYOU/andyoulanding/index.html" />
-        <option value="$PROJECT_DIR$/modules/shindig/views/shindig/admin/places/add.php" />
         <option value="$USER_HOME$/ANDYOU/homeandyoulanding/css/main.css" />
         <option value="$USER_HOME$/ANDYOU/homeandyoulanding/index.html" />
         <option value="$PROJECT_DIR$/modules/shindig/classes/model/shindig/post.php" />
         <option value="$PROJECT_DIR$/modules/shindig/views/shindig/admin/edit_post.php" />
+        <option value="$PROJECT_DIR$/application/classes/model/house.php" />
+        <option value="$PROJECT_DIR$/modules/shindig/classes/controller/shindig/places.php" />
+        <option value="$PROJECT_DIR$/modules/shindig/views/shindig/admin/places/add.php" />
       </list>
     </option>
   </component>
@@ -321,6 +348,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shindig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="places" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shindig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -420,6 +485,102 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shindig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="realstate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="house" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -634,16 +795,6 @@
         <state line="2" column="46" selection-start="108" selection-end="108" vertical-scroll-proportion="0.034285713" vertical-offset="0" max-vertical-offset="875" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/model/house/service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="8" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/model/service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="74" selection-start="149" selection-end="149" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="316" column="20" selection-start="8787" selection-end="8787" vertical-scroll-proportion="-8.333333" vertical-offset="4540" max-vertical-offset="5475" />
@@ -662,11 +813,6 @@
     <entry file="file://$PROJECT_DIR$/modules/image/classes/kohana/image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="588" column="20" selection-start="14052" selection-end="14052" vertical-scroll-proportion="0.0" vertical-offset="8664" max-vertical-offset="11220" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1320" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/admin/services/add.php">
@@ -694,11 +840,6 @@
         <state line="0" column="0" selection-start="0" selection-end="264" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1590" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/model/house.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/model/zone.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="16" selection-start="251" selection-end="251" vertical-scroll-proportion="0.20571429" vertical-offset="0" max-vertical-offset="875" />
@@ -707,11 +848,6 @@
     <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/admin/places/list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="18" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/places.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="50" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="1860" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/controller/welcome.php">
@@ -791,13 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/admin/places/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="2535">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="44" selection-start="1287" selection-end="1299" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1845">
@@ -821,21 +950,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/shindig/classes/model/shindig/post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="45" selection-start="2020" selection-end="2020" vertical-scroll-proportion="-18.958334" vertical-offset="760" max-vertical-offset="1785">
+        <state line="81" column="45" selection-start="2020" selection-end="2020" vertical-scroll-proportion="0.5352941" vertical-offset="760" max-vertical-offset="1785">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="176" selection-end="176" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+        <state line="4" column="6" selection-start="176" selection-end="176" vertical-scroll-proportion="0.068571426" vertical-offset="0" max-vertical-offset="875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="39" selection-start="806" selection-end="806" vertical-scroll-proportion="-13.333333" vertical-offset="85" max-vertical-offset="1320">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/admin/edit_post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="43" selection-start="693" selection-end="693" vertical-scroll-proportion="0.39314285" vertical-offset="46" max-vertical-offset="1155">
+        <state line="26" column="43" selection-start="693" selection-end="693" vertical-scroll-proportion="0.4457143" vertical-offset="0" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/model/house/service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="25" selection-start="19" selection-end="32" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/model/service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="74" selection-start="149" selection-end="149" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/model/house.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="80" selection-start="154" selection-end="154" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shindig/classes/controller/shindig/places.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="30" selection-start="2203" selection-end="2221" vertical-scroll-proportion="-7.58" vertical-offset="731" max-vertical-offset="1800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/shindig/views/shindig/admin/places/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="69" selection-start="6422" selection-end="6422" vertical-scroll-proportion="0.6742857" vertical-offset="1795" max-vertical-offset="2670">
           <folding />
         </state>
       </provider>

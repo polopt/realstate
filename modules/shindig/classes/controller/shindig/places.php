@@ -58,6 +58,7 @@ class Controller_Shindig_Places extends Controller_Shindig_Admin
 			->bind('categories', $categories)
 			->bind('editor', $editor)
             ->bind('zones', $zones)
+            ->bind('services_array', $services_selected)
             ->bind('services', $services);
 		$msg = "";
 		$house = ORM::factory('house');
@@ -66,10 +67,12 @@ class Controller_Shindig_Places extends Controller_Shindig_Admin
         $services =  ORM::factory('service')->find_all();
 		$categories = ORM::factory('category')->find_all();
         $zones = ORM::factory('zone')->find_all();
+        $services_selected = null;
 
 		if(!is_null($id)) {
 			$house->find($id);
 			$description = $house->description;
+            $services_selected = ORM::factory('house_service')->where('house_id', '=', $id)->find_all();
 //			$image = ORM::factory("photo")->where("event_id", "=", $id)->where("is_background", "=", true)->find();
 		}
 
@@ -82,22 +85,15 @@ class Controller_Shindig_Places extends Controller_Shindig_Admin
                 $msg = $house->validate()->errors();
             } else {
                 $house->save();
-//                if(!is_null($_POST['services'])) {
-                    foreach ($_POST['services'] as $selectedOption) {
-                        $servicesIds = $_POST['services'];
-                        $house->add('services', ORM::factory('service')->find($selectedOption));
-//                        var_dump($_POST['services']);die;
-                    }
-//                }
+                foreach ($_POST['services'] as $selectedOption) {
+                    $servicesIds = $_POST['services'];
+                    $house->add('services', ORM::factory('service')->find($selectedOption));
+                }
 				if (isset($_FILES["image"]) and !is_null($_FILES["image"])) {
 					if(!empty($_FILES['image']['tmp_name'])) {
 						$file = $_FILES['image']['tmp_name'];
 						$image = ORM::factory('photo');
 						if($image->save_image_form($_FILES['image'], $house->id, 1)) {
-							/*if(isset($_POST["description"]) and !is_null($_POST["description$i"])) {
-								if($_POST["description$i"] != "Insira descrição aqui ...")
-								$image->description = $_POST["description$i"];
-							}*/
 							$image->is_background = 1;
 							$image->save();
 							$msg .= "Imagem guardada <br />";
